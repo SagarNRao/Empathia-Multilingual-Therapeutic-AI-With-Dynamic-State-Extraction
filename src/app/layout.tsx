@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 const loraHeading = Lora({subsets:['latin'],variable:'--font-heading'});
 
-const outfit = Outfit({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", outfit.variable, loraHeading.variable)}
+      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", geist.variable, loraHeading.variable)}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
