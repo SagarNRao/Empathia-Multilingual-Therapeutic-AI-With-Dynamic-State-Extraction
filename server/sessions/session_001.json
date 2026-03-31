@@ -1,0 +1,137 @@
+{
+  "session_id": 1,
+  "created": "2026-03-31T14:29:04.648974",
+  "conversation": [
+    {
+      "role": "user",
+      "content": "hi",
+      "timestamp": "2026-03-31T14:29:04.648974"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey, buddy! I'm Indy, your copilot. Ready for takeoff? Let's get this flight started!",
+      "timestamp": "2026-03-31T14:29:04.648974",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.5091,
+          "cognitive": 0.2688,
+          "affective": 0.2221
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "error": "Failed to parse notes"
+      }
+    },
+    {
+      "role": "user",
+      "content": "My name is bottleman",
+      "timestamp": "2026-03-31T14:29:06.513247"
+    },
+    {
+      "role": "assistant",
+      "content": "Nice to meet you, Bottleman! We're gonna have a blast in the skies! Buckle up, we're about to hit some turbulence... in the conversation, that is!",
+      "timestamp": "2026-03-31T14:29:06.513247",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.7154,
+          "affective": 0.1652,
+          "cognitive": 0.1194
+        },
+        "dominant": "agency"
+      },
+      "notes": {}
+    },
+    {
+      "role": "user",
+      "content": "raaaa",
+      "timestamp": "2026-03-31T14:29:08.221954"
+    },
+    {
+      "role": "assistant",
+      "content": "Whoa, wild ride ahead! Hold on tight, Bottleman!",
+      "timestamp": "2026-03-31T14:29:08.221954",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.4133,
+          "affective": 0.4001,
+          "cognitive": 0.1866
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "convo_status": "turmoil",
+        "mood": "excited"
+      }
+    },
+    {
+      "role": "user",
+      "content": "what is my name",
+      "timestamp": "2026-03-31T14:29:09.827644"
+    },
+    {
+      "role": "assistant",
+      "content": "Your name is Bottleman, buddy!",
+      "timestamp": "2026-03-31T14:29:09.827644",
+      "cognitive_shift": {
+        "scores": {
+          "cognitive": 0.5111,
+          "agency": 0.3904,
+          "affective": 0.0985
+        },
+        "dominant": "cognitive"
+      },
+      "notes": {}
+    }
+  ],
+  "cognitive_shifts": [
+    {
+      "message": "hi",
+      "analysis": {
+        "scores": {
+          "agency": 0.5091,
+          "cognitive": 0.2688,
+          "affective": 0.2221
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-03-31T14:29:04.648974"
+    },
+    {
+      "message": "My name is bottleman",
+      "analysis": {
+        "scores": {
+          "agency": 0.7154,
+          "affective": 0.1652,
+          "cognitive": 0.1194
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-03-31T14:29:06.513247"
+    },
+    {
+      "message": "raaaa",
+      "analysis": {
+        "scores": {
+          "agency": 0.4133,
+          "affective": 0.4001,
+          "cognitive": 0.1866
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-03-31T14:29:08.221954"
+    },
+    {
+      "message": "what is my name",
+      "analysis": {
+        "scores": {
+          "cognitive": 0.5111,
+          "agency": 0.3904,
+          "affective": 0.0985
+        },
+        "dominant": "cognitive"
+      },
+      "timestamp": "2026-03-31T14:29:09.827644"
+    }
+  ]
+}
