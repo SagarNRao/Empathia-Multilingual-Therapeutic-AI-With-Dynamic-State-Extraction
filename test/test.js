@@ -65,7 +65,7 @@ async function testIndyCopilot(userMessage) {
 
 // Run the test with multiple messages in sequence
 async function runFullTest() {
-  await testIndyCopilot("hi");
+  await testIndyCopilot("dude i am so sad");
   await new Promise(r => setTimeout(r, 1000)); // Wait 1 sec between messages
   
   await testIndyCopilot("My name is bottleman");
@@ -74,7 +74,7 @@ async function runFullTest() {
   await testIndyCopilot("raaaa");
   await new Promise(r => setTimeout(r, 1000));
   
-  await testIndyCopilot("what is my name");
+  await testIndyCopilot("i need to learn how to backflip");
   await new Promise(r => setTimeout(r, 1000));
   
   console.log("%c=== FULL CONVERSATION HISTORY ===", "color: #ec4899; font-weight: bold;");
