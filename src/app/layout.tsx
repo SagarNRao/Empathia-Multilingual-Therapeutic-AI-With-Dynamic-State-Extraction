@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Outfit, Lora } from "next/font/google";
+import { Geist, Geist_Mono, Lora } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", geist.variable, loraHeading.variable)}
+      className={cn("h-full dark", "antialiased", geistSans.variable, geistMono.variable, "font-sans", geist.variable, loraHeading.variable)}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
