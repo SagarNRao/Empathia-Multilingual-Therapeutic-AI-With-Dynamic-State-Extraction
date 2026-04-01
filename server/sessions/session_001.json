@@ -1,16 +1,16 @@
 {
   "session_id": 1,
-  "created": "2026-04-01T17:15:24.320051",
+  "created": "2026-04-01T17:24:33.535591",
   "conversation": [
     {
       "role": "user",
       "content": "dude i am so sad",
-      "timestamp": "2026-04-01T17:15:24.320051"
+      "timestamp": "2026-04-01T17:24:33.535591"
     },
     {
       "role": "assistant",
-      "content": "I\u2019m really sorry you\u2019re feeling this way\u2014I'm here for you.",
-      "timestamp": "2026-04-01T17:15:24.320051",
+      "content": "I\u2019m really sorry you\u2019re feeling this way. If you want to talk more about what\u2019s behind the sadness, I\u2019m here.",
+      "timestamp": "2026-04-01T17:24:33.535591",
       "cognitive_shift": {
         "scores": {
           "affective": 0.8217,
@@ -23,24 +23,21 @@
         "session_id": 1,
         "date": "2026-04-01",
         "session_type": "brain_dump",
-        "notes": [
-          {
-            "title": "emotional_state",
-            "content": "User expressed feeling sad.",
-            "category": "emotion"
-          }
-        ]
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
       }
     },
     {
       "role": "user",
       "content": "My name is bottleman",
-      "timestamp": "2026-04-01T17:15:28.946958"
+      "timestamp": "2026-04-01T17:24:36.956505"
     },
     {
       "role": "assistant",
-      "content": "I\u2019m really sorry you\u2019re feeling sad, bottleman\u2014let\u2019s take it one step at a time together.",
-      "timestamp": "2026-04-01T17:15:28.946958",
+      "content": "Nice to meet you, Bottleman! If you\u2019d like to share more, I\u2019m here to listen.",
+      "timestamp": "2026-04-01T17:24:36.956505",
       "cognitive_shift": {
         "scores": {
           "agency": 0.7154,
@@ -55,14 +52,9 @@
         "session_type": "brain_dump",
         "notes": [
           {
-            "title": "personal_name",
-            "content": "User goes by the name 'bottleman'.",
+            "title": "name",
+            "content": "Bottleman",
             "category": "personal_info"
-          },
-          {
-            "title": "current_emotion",
-            "content": "User expressed feeling sad.",
-            "category": "emotional_state"
           }
         ]
       }
@@ -70,12 +62,12 @@
     {
       "role": "user",
       "content": "i need to learn how to backflip",
-      "timestamp": "2026-04-01T17:15:32.293068"
+      "timestamp": "2026-04-01T17:24:47.879230"
     },
     {
       "role": "assistant",
-      "content": "I\u2019m here for you, bottleman\u2014let\u2019s keep moving forward together.",
-      "timestamp": "2026-04-01T17:15:32.293068",
+      "content": "That sounds like a fun challenge\u2014good luck with the backflip training!",
+      "timestamp": "2026-04-01T17:24:47.879230",
       "cognitive_shift": {
         "scores": {
           "agency": 0.7284,
@@ -90,19 +82,9 @@
         "session_type": "brain_dump",
         "notes": [
           {
-            "title": "name",
-            "content": "bottleman",
-            "category": "personal_info"
-          },
-          {
-            "title": "current_mood",
-            "content": "sad",
-            "category": "emotional_state"
-          },
-          {
-            "title": "aspiration_backflip",
+            "title": "backflip_goal",
             "content": "wants to learn how to backflip",
-            "category": "goals"
+            "category": "skill_goal"
           }
         ]
       }
@@ -110,12 +92,12 @@
     {
       "role": "user",
       "content": "quit",
-      "timestamp": "2026-04-01T17:15:38.525291"
+      "timestamp": "2026-04-01T17:24:58.813236"
     },
     {
       "role": "assistant",
-      "content": "I hear you, bottleman\u2014I'm here whenever you need.",
-      "timestamp": "2026-04-01T17:15:38.525291",
+      "content": "I hear you\u2014let\u2019s pause for now. Take care, and I\u2019m here whenever you want to chat again.",
+      "timestamp": "2026-04-01T17:24:58.813236",
       "cognitive_shift": {
         "scores": {
           "agency": 0.5605,
@@ -128,28 +110,10 @@
         "session_id": 1,
         "date": "2026-04-01",
         "session_type": "brain_dump",
-        "notes": [
-          {
-            "title": "user_name",
-            "content": "bottleman",
-            "category": "identity"
-          },
-          {
-            "title": "emotional_state",
-            "content": "feeling sad",
-            "category": "emotion"
-          },
-          {
-            "title": "goal",
-            "content": "wants to learn how to backflip",
-            "category": "aspiration"
-          },
-          {
-            "title": "session_intent",
-            "content": "expressed desire to quit the conversation, possibly feeling overwhelmed",
-            "category": "session_feedback"
-          }
-        ]
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
       }
     }
   ],
@@ -164,7 +128,7 @@
         },
         "dominant": "affective"
       },
-      "timestamp": "2026-04-01T17:15:24.320051"
+      "timestamp": "2026-04-01T17:24:33.535591"
     },
     {
       "message": "My name is bottleman",
@@ -176,7 +140,7 @@
         },
         "dominant": "agency"
       },
-      "timestamp": "2026-04-01T17:15:28.946958"
+      "timestamp": "2026-04-01T17:24:36.956505"
     },
     {
       "message": "i need to learn how to backflip",
@@ -188,7 +152,7 @@
         },
         "dominant": "agency"
       },
-      "timestamp": "2026-04-01T17:15:32.293068"
+      "timestamp": "2026-04-01T17:24:47.879230"
     },
     {
       "message": "quit",
@@ -200,7 +164,7 @@
         },
         "dominant": "agency"
       },
-      "timestamp": "2026-04-01T17:15:38.525291"
+      "timestamp": "2026-04-01T17:24:58.813236"
     }
   ]
 }
