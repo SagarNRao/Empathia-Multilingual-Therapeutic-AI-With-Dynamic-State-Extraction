@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Lora } from "next/font/google";
+import { Geist, Geist_Mono, Lora, Instrument_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
 const loraHeading = Lora({subsets:['latin'],variable:'--font-heading'});
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const instrumentSans = Instrument_Sans({subsets:['latin'],variable:'--font-sans'});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full dark", "antialiased", geistSans.variable, geistMono.variable, "font-sans", geist.variable, loraHeading.variable)}
+      className={cn("h-full dark", "antialiased", geistSans.variable, geistMono.variable, "font-sans", instrumentSans.variable, loraHeading.variable)}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

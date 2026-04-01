@@ -1,65 +1,192 @@
-import Image from "next/image";
+"use client";
+
+import { useState, useRef, useEffect } from "react";
+import { Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { NotesSidebar } from "@/components/notes-sidebar";
+
+export type Note = {
+  title: string;
+  content: string;
+  category: string;
+};
+
+export type NotesMap = Record<string, Note>;
+
+export type Message = {
+  role: "user" | "assistant";
+  content: string;
+};
+
+const SESSION_ID = 1;
 
 export default function Home() {
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      role: "assistant",
+      content:
+        "Hey, I'm Indy — your ADHD copilot. What's on your mind today?",
+    },
+  ]);
+  const [notes, setNotes] = useState<NotesMap>({});
+  const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
+  const bottomRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
+
+  async function sendMessage() {
+    const text = input.trim();
+    if (!text || loading) return;
+
+    const newMessages: Message[] = [
+      ...messages,
+      { role: "user", content: text },
+    ];
+    setMessages(newMessages);
+    setInput("");
+    setLoading(true);
+
+    try {
+      const res = await fetch("http://localhost:8000/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          session_id: SESSION_ID,
+          message: text,
+          history: newMessages.map((m) => ({
+            role: m.role,
+            content: m.content,
+          })),
+        }),
+      });
+
+      if (!res.ok) throw new Error("API error");
+      const data = await res.json();
+
+      setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: data.reply },
+      ]);
+
+      // Merge new notes into existing ones
+      if (data.extracted_notes?.notes) {
+        const incoming: NotesMap = {};
+        const raw = data.extracted_notes.notes;
+
+        // Handle both array and object shapes
+        if (Array.isArray(raw)) {
+          raw.forEach((n: Note, i: number) => {
+            incoming[n.title?.replace(/\s+/g, "_").toLowerCase() ?? `note_${i}`] = n;
+          });
+        } else {
+          Object.assign(incoming, raw);
+        }
+
+        setNotes((prev) => ({ ...prev, ...incoming }));
+      }
+    } catch {
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          content: "Sorry, I couldn't connect to the server. Is the backend running?",
+        },
+      ]);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  function handleKeyDown(e: React.KeyboardEvent) {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  }
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="flex h-screen bg-[#0f0f0f] text-[#e8e3d9] font-sans overflow-hidden">
+      {/* Chat area */}
+      <div className="flex flex-col flex-1 min-w-0">
+        {/* Header */}
+        <div className="px-6 py-4 border-b border-white/[0.06] flex items-center gap-3">
+          <div className="w-2 h-2 rounded-full bg-[#c8a96e] animate-pulse" />
+          <span className="text-sm font-medium tracking-widest uppercase text-[#c8a96e]">
+            Indy
+          </span>
+          <span className="text-xs text-white/30 ml-auto">Session {SESSION_ID}</span>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+
+        {/* Messages */}
+        <ScrollArea className="flex-1 px-6 py-6">
+          <div className="max-w-2xl mx-auto space-y-6">
+            {messages.map((msg, i) => (
+              <div
+                key={i}
+                className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
+              >
+                <div
+                  className={`max-w-[78%] px-4 py-3 rounded-2xl text-sm leading-relaxed ${
+                    msg.role === "user"
+                      ? "bg-[#c8a96e]/10 text-[#e8e3d9] border border-[#c8a96e]/20 rounded-br-sm"
+                      : "bg-white/[0.04] text-[#c9c3b8] border border-white/[0.06] rounded-bl-sm"
+                  }`}
+                >
+                  {msg.content}
+                </div>
+              </div>
+            ))}
+
+            {loading && (
+              <div className="flex justify-start">
+                <div className="bg-white/[0.04] border border-white/[0.06] rounded-2xl rounded-bl-sm px-4 py-3">
+                  <span className="flex gap-1">
+                    {[0, 1, 2].map((i) => (
+                      <span
+                        key={i}
+                        className="w-1.5 h-1.5 rounded-full bg-[#c8a96e]/60 animate-bounce"
+                        style={{ animationDelay: `${i * 0.15}s` }}
+                      />
+                    ))}
+                  </span>
+                </div>
+              </div>
+            )}
+
+            <div ref={bottomRef} />
+          </div>
+        </ScrollArea>
+
+        {/* Input */}
+        <div className="px-6 py-4 border-t border-white/[0.06]">
+          <div className="max-w-2xl mx-auto flex gap-2">
+            <Input
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={handleKeyDown}
+              placeholder="What's going on…"
+              disabled={loading}
+              className="flex-1 bg-white/[0.04] border-white/[0.08] text-[#e8e3d9] placeholder:text-white/20 focus-visible:ring-[#c8a96e]/40 focus-visible:border-[#c8a96e]/40 rounded-xl h-11"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <Button
+              onClick={sendMessage}
+              disabled={loading || !input.trim()}
+              size="icon"
+              className="h-11 w-11 rounded-xl bg-[#c8a96e] hover:bg-[#b8996e] text-[#0f0f0f] disabled:opacity-30 shrink-0"
+            >
+              <Send className="w-4 h-4" />
+            </Button>
+          </div>
         </div>
-      </main>
+      </div>
+
+      {/* Sidebar */}
+      <NotesSidebar notes={notes} />
     </div>
   );
 }
