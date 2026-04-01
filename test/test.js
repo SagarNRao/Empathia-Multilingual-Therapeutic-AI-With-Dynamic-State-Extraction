@@ -71,10 +71,10 @@ async function runFullTest() {
   await testIndyCopilot("My name is bottleman");
   await new Promise(r => setTimeout(r, 1000));
   
-  await testIndyCopilot("raaaa");
+  await testIndyCopilot("i need to learn how to backflip");
   await new Promise(r => setTimeout(r, 1000));
   
-  await testIndyCopilot("i need to learn how to backflip");
+  await testIndyCopilot("quit");
   await new Promise(r => setTimeout(r, 1000));
   
   console.log("%c=== FULL CONVERSATION HISTORY ===", "color: #ec4899; font-weight: bold;");

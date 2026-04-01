@@ -1,16 +1,16 @@
 {
   "session_id": 1,
-  "created": "2026-03-31T14:50:01.866808",
+  "created": "2026-04-01T17:02:30.215601",
   "conversation": [
     {
       "role": "user",
       "content": "dude i am so sad",
-      "timestamp": "2026-03-31T14:50:01.866808"
+      "timestamp": "2026-04-01T17:02:30.215601"
     },
     {
       "role": "assistant",
-      "content": "Hey, I\u2019m really sorry you\u2019re feeling this way. It\u2019s okay to feel sad\u2014take a moment for yourself, breathe, and maybe do something small that usually brings you a bit of comfort. If you can, reach out to someone you trust; sharing can help lighten the load. You deserve kindness, especially from yourself. \ud83c\udf31",
-      "timestamp": "2026-03-31T14:50:01.866808",
+      "content": "I\u2019m really sorry you\u2019re feeling this way. It\u2019s okay to sit with the sadness for a moment\u2014just breathe and know you\u2019re not alone. If you want to talk more or need a little distraction, I\u2019m here.",
+      "timestamp": "2026-04-01T17:02:30.215601",
       "cognitive_shift": {
         "scores": {
           "affective": 0.8217,
@@ -20,19 +20,24 @@
         "dominant": "affective"
       },
       "notes": {
-        "notes": "User expressed sadness; provided brief, gentle, supportive response encouraging self\u2011care and reaching out.",
-        "timestamp": "2026-03-31T14:50:00.952640"
+        "session_id": 1,
+        "date": "2026-04-01",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
       }
     },
     {
       "role": "user",
       "content": "My name is bottleman",
-      "timestamp": "2026-03-31T14:50:05.322772"
+      "timestamp": "2026-04-01T17:02:32.649721"
     },
     {
       "role": "assistant",
-      "content": "Nice to meet you, Bottleman! How can I help you today?",
-      "timestamp": "2026-03-31T14:50:05.322772",
+      "content": "Nice to meet you, Bottleman! If you\u2019d like to share what\u2019s on your mind, I\u2019m here to listen.",
+      "timestamp": "2026-04-01T17:02:32.649721",
       "cognitive_shift": {
         "scores": {
           "agency": 0.7154,
@@ -42,41 +47,24 @@
         "dominant": "agency"
       },
       "notes": {
-        "notes": "Acknowledged user's name and offered assistance.",
-        "timestamp": "2026-03-31T14:50:03.440509"
-      }
-    },
-    {
-      "role": "user",
-      "content": "raaaa",
-      "timestamp": "2026-03-31T14:50:08.004027"
-    },
-    {
-      "role": "assistant",
-      "content": "I hear you\u2014sounds like you\u2019re really frustrated. Take a deep breath; it might help a little. If you want to talk about what\u2019s going on, I\u2019m here. \ud83c\udf3f",
-      "timestamp": "2026-03-31T14:50:08.004027",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.4133,
-          "affective": 0.4001,
-          "cognitive": 0.1866
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "notes": "User expressed frustration with \"raaaa\"; responded with empathetic, brief support and invitation to talk.",
-        "timestamp": "2026-03-31T14:50:06.827300"
+        "session_id": 1,
+        "date": "2026-04-01",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
       }
     },
     {
       "role": "user",
       "content": "i need to learn how to backflip",
-      "timestamp": "2026-03-31T14:50:16.132529"
+      "timestamp": "2026-04-01T17:02:46.898745"
     },
     {
       "role": "assistant",
-      "content": "Here\u2019s a quick, safe roadmap to start learning a backflip:\n\n1. **Build basics**  \n   - **Core & leg strength** \u2013 planks, hollow holds, squats, box jumps.  \n   - **Vertical jump** \u2013 practice jumping as high as you can; the higher you go, the easier the rotation.\n\n2. **Master the back\u2011roll**  \n   - On a soft mat, roll backward, pulling your knees to your chest. This gets you comfortable with the tucked position and the feeling of rotating.\n\n3. **Learn the \u201cMacaco\u201d (back\u2011roll with a hop)**  \n   - From a standing squat, hop slightly and roll back, keeping the tuck tight. It bridges the gap between a roll and a flip.\n\n4. **Progress to assisted flips**  \n   - **Spotter / trampoline** \u2013 have a partner hold your hips or use a low trampoline to practice the rotation with reduced impact.  \n   - **Elevated roll** \u2013 roll off a low box or bench, landing on a mat, to feel a bit more height.\n\n5. **First full backflip on a soft surface**  \n   - Use a gymnastics mat, foam pit, or thick grass.  \n   - **Take\u2011off:** squat, swing arms up, jump straight up (not backward).  \n   - **Tuck:** at the peak, pull knees to chest and grab them if possible.  \n   - **Spot the landing:** open your eyes early, extend legs as you rotate, land with knees slightly bent.\n\n6. **Practice, refine, and add height**  \n   - Keep the movement tight, land soft, and gradually try on firmer ground (grass, then a gym floor).\n\n**Helpful videos** (quick demos you can watch before trying):\n- **Bob Reese \u2013 \u201cHow To Backflip (On Grass With No Equipment)\u201d** \u2013 https://www.youtube.com/watch?v=YW8FPY7VGjE  \n- **Parkour athlete tutorial** \u2013 https://www.youtube.com/watch?v=X9rHyckeTtg  \n- **5\u2011minute backflip guide** \u2013 https://www.youtube.com/watch?v=ltho8_PzC2U  \n\n**Safety tips**\n- Always practice on a padded surface first.  \n- Use a spotter or a trainer if possible.  \n- Keep your head tucked and eyes open to maintain orientation.  \n- Stop if you feel pain or excessive fear\u2014progress at your own pace.\n\nGive yourself time, stay consistent, and celebrate each small win. You\u2019ve got this!  \n\n---",
-      "timestamp": "2026-03-31T14:50:16.132529",
+      "content": "Sure thing, Bottleman! Here\u2019s a quick, safe roadmap to get you flipping:\n\n1. **Warm\u2011up & core** \u2013 5\u201110\u202fmin of jumping jacks, planks, and dynamic stretches.  \n2. **Back roll** \u2013 Practice rolling backward on the floor, pulling your knees to your chest; this builds the feel for the rotation.  \n3. **Macaco / back\u2011tuck drill** \u2013 From a kneeling start, swing your arms up, jump a little, and tuck your knees tight. Do it on a soft mat with a spotter.  \n4. **Progress to a low platform** \u2013 Use a gymnastics mat or foam pit; try a small \u201cjump\u2011and\u2011tuck\u201d from a kneeling or squat position.  \n5. **Full backflip** \u2013 On a soft surface, swing arms up, jump straight, tuck knees to chest, keep eyes open, and spot the landing. Land with knees slightly bent.  \n\n**Safety tips**  \n- Always practice on a mat or grass.  \n- Have a spotter (friend or coach) for the first few attempts.  \n- Keep your head tucked and look forward once you\u2019re upside\u2011down to avoid over\u2011rotating.  \n\nTake it step\u2011by\u2011step, stay patient, and celebrate each little win. You\u2019ve got this!",
+      "timestamp": "2026-04-01T17:02:46.898745",
       "cognitive_shift": {
         "scores": {
           "agency": 0.7284,
@@ -86,8 +74,40 @@
         "dominant": "agency"
       },
       "notes": {
-        "notes": "Provided a concise, step\u2011by\u2011step backflip learning plan with safety tips and video links, following the gentle, short style required.",
-        "timestamp": "2026-03-31T14:55:12.839274"
+        "session_id": 1,
+        "date": "2026-04-01",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "quit",
+      "timestamp": "2026-04-01T17:02:52.112144"
+    },
+    {
+      "role": "assistant",
+      "content": "Got it\u2014take care and feel free to come back anytime.",
+      "timestamp": "2026-04-01T17:02:52.112144",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.5605,
+          "affective": 0.3467,
+          "cognitive": 0.0928
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-01",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
       }
     }
   ],
@@ -102,7 +122,7 @@
         },
         "dominant": "affective"
       },
-      "timestamp": "2026-03-31T14:50:01.866808"
+      "timestamp": "2026-04-01T17:02:30.215601"
     },
     {
       "message": "My name is bottleman",
@@ -114,19 +134,7 @@
         },
         "dominant": "agency"
       },
-      "timestamp": "2026-03-31T14:50:05.322772"
-    },
-    {
-      "message": "raaaa",
-      "analysis": {
-        "scores": {
-          "agency": 0.4133,
-          "affective": 0.4001,
-          "cognitive": 0.1866
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-03-31T14:50:08.004027"
+      "timestamp": "2026-04-01T17:02:32.649721"
     },
     {
       "message": "i need to learn how to backflip",
@@ -138,7 +146,19 @@
         },
         "dominant": "agency"
       },
-      "timestamp": "2026-03-31T14:50:16.132529"
+      "timestamp": "2026-04-01T17:02:46.898745"
+    },
+    {
+      "message": "quit",
+      "analysis": {
+        "scores": {
+          "agency": 0.5605,
+          "affective": 0.3467,
+          "cognitive": 0.0928
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-01T17:02:52.112144"
     }
   ]
 }
