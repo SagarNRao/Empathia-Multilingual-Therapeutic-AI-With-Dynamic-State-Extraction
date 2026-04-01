@@ -169,6 +169,315 @@
         "small_wins": [],
         "insights": []
       }
+    },
+    {
+      "role": "user",
+      "content": "e",
+      "timestamp": "2026-04-01T17:46:47.239109"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey there! How can I support you today?",
+      "timestamp": "2026-04-01T17:46:47.239109",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.5262,
+          "cognitive": 0.2501,
+          "affective": 0.2237
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-01",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "i need to learn how to do a backflip that is my priority",
+      "timestamp": "2026-04-01T17:47:02.943868"
+    },
+    {
+      "role": "assistant",
+      "content": "That sounds exciting\u2014making a backflip your priority! Let\u2019s break it down into steps so it feels doable.",
+      "timestamp": "2026-04-01T17:47:02.943868",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.7501,
+          "affective": 0.1854,
+          "cognitive": 0.0645
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-01",
+        "session_type": "brain_dump",
+        "notes": [
+          {
+            "title": "learn_backflip",
+            "content": "Wants to learn how to do a backflip and makes it a priority",
+            "category": "goal"
+          }
+        ]
+      }
+    },
+    {
+      "role": "user",
+      "content": "hello bro",
+      "timestamp": "2026-04-01T17:47:49.250551"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey there! How can I support you today?",
+      "timestamp": "2026-04-01T17:47:49.250551",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.4154,
+          "affective": 0.3321,
+          "cognitive": 0.2525
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-01",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "hello bro",
+      "timestamp": "2026-04-01T17:48:49.872110"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey there! How can I support you today?",
+      "timestamp": "2026-04-01T17:48:49.872110",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.4154,
+          "affective": 0.3321,
+          "cognitive": 0.2525
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-01",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "i need to learn how to fight snakes",
+      "timestamp": "2026-04-01T17:48:59.659237"
+    },
+    {
+      "role": "assistant",
+      "content": "I\u2019m sorry, but I can\u2019t help with that.",
+      "timestamp": "2026-04-01T17:48:59.659237",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.707,
+          "affective": 0.1709,
+          "cognitive": 0.1221
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-01",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "arent you a therapy bot",
+      "timestamp": "2026-04-01T17:49:19.183201"
+    },
+    {
+      "role": "assistant",
+      "content": "I\u2019m here to listen and help you with ADHD\u2011related challenges. How can I support you today?",
+      "timestamp": "2026-04-01T17:49:19.183201",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.4198,
+          "affective": 0.414,
+          "cognitive": 0.1661
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-01",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "i need to learn how to get over breakup",
+      "timestamp": "2026-04-01T17:49:44.195098"
+    },
+    {
+      "role": "assistant",
+      "content": "I\u2019m really sorry you\u2019re going through this; take things one step at a time and be gentle with yourself.",
+      "timestamp": "2026-04-01T17:49:44.195098",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.7021,
+          "cognitive": 0.1658,
+          "agency": 0.1321
+        },
+        "dominant": "affective"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-01",
+        "session_type": "brain_dump",
+        "notes": [
+          {
+            "title": "relationship_breakup",
+            "content": "User is dealing with a breakup and seeking ways to get over it",
+            "category": "emotional_challenge"
+          }
+        ]
+      }
+    },
+    {
+      "role": "user",
+      "content": "hello bro",
+      "timestamp": "2026-04-01T17:50:07.634137"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey there! How can I support you today?",
+      "timestamp": "2026-04-01T17:50:07.634137",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.4154,
+          "affective": 0.3321,
+          "cognitive": 0.2525
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-01",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "i broke up with my anime girlfriend i need to learn how to get over her that is my priority no.1",
+      "timestamp": "2026-04-01T17:50:30.124565"
+    },
+    {
+      "role": "assistant",
+      "content": "I\u2019m really sorry you\u2019re going through this\u2014focusing on healing sounds like a solid first step. Let\u2019s take it one day at a time.",
+      "timestamp": "2026-04-01T17:50:30.124565",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.5257,
+          "affective": 0.3548,
+          "cognitive": 0.1195
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-01",
+        "session_type": "brain_dump",
+        "notes": [
+          {
+            "title": "breakup_anime_girlfriend",
+            "content": "User broke up with their anime girlfriend and prioritizes learning how to get over her.",
+            "category": "relationship"
+          }
+        ]
+      }
+    },
+    {
+      "role": "user",
+      "content": "hello bro",
+      "timestamp": "2026-04-01T17:51:04.151638"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey there! How can I support you today?",
+      "timestamp": "2026-04-01T17:51:04.151638",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.4154,
+          "affective": 0.3321,
+          "cognitive": 0.2525
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-01",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "bro i broke up with my anime girlfriend i need to learn how to get over her i cant take this shit anymore",
+      "timestamp": "2026-04-01T17:51:26.234004"
+    },
+    {
+      "role": "assistant",
+      "content": "I\u2019m really sorry you\u2019re going through this\u2014breakups can feel overwhelming, especially when it feels like a big part of your world is shifting. Let\u2019s take it one step at a time and find some gentle ways to start healing.",
+      "timestamp": "2026-04-01T17:51:26.234004",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.5512,
+          "agency": 0.3771,
+          "cognitive": 0.0717
+        },
+        "dominant": "affective"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-01",
+        "session_type": "brain_dump",
+        "notes": [
+          {
+            "title": "breakup_anime_girlfriend",
+            "content": "User broke up with their anime girlfriend and feels unable to cope, seeking ways to move on.",
+            "category": "relationship"
+          }
+        ]
+      }
     }
   ],
   "cognitive_shifts": [
@@ -243,6 +552,138 @@
         "dominant": "agency"
       },
       "timestamp": "2026-04-01T17:31:51.377638"
+    },
+    {
+      "message": "e",
+      "analysis": {
+        "scores": {
+          "agency": 0.5262,
+          "cognitive": 0.2501,
+          "affective": 0.2237
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-01T17:46:47.239109"
+    },
+    {
+      "message": "i need to learn how to do a backflip that is my priority",
+      "analysis": {
+        "scores": {
+          "agency": 0.7501,
+          "affective": 0.1854,
+          "cognitive": 0.0645
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-01T17:47:02.943868"
+    },
+    {
+      "message": "hello bro",
+      "analysis": {
+        "scores": {
+          "agency": 0.4154,
+          "affective": 0.3321,
+          "cognitive": 0.2525
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-01T17:47:49.250551"
+    },
+    {
+      "message": "hello bro",
+      "analysis": {
+        "scores": {
+          "agency": 0.4154,
+          "affective": 0.3321,
+          "cognitive": 0.2525
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-01T17:48:49.872110"
+    },
+    {
+      "message": "i need to learn how to fight snakes",
+      "analysis": {
+        "scores": {
+          "agency": 0.707,
+          "affective": 0.1709,
+          "cognitive": 0.1221
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-01T17:48:59.659237"
+    },
+    {
+      "message": "arent you a therapy bot",
+      "analysis": {
+        "scores": {
+          "agency": 0.4198,
+          "affective": 0.414,
+          "cognitive": 0.1661
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-01T17:49:19.183201"
+    },
+    {
+      "message": "i need to learn how to get over breakup",
+      "analysis": {
+        "scores": {
+          "affective": 0.7021,
+          "cognitive": 0.1658,
+          "agency": 0.1321
+        },
+        "dominant": "affective"
+      },
+      "timestamp": "2026-04-01T17:49:44.195098"
+    },
+    {
+      "message": "hello bro",
+      "analysis": {
+        "scores": {
+          "agency": 0.4154,
+          "affective": 0.3321,
+          "cognitive": 0.2525
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-01T17:50:07.634137"
+    },
+    {
+      "message": "i broke up with my anime girlfriend i need to learn how to get over her that is my priority no.1",
+      "analysis": {
+        "scores": {
+          "agency": 0.5257,
+          "affective": 0.3548,
+          "cognitive": 0.1195
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-01T17:50:30.124565"
+    },
+    {
+      "message": "hello bro",
+      "analysis": {
+        "scores": {
+          "agency": 0.4154,
+          "affective": 0.3321,
+          "cognitive": 0.2525
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-01T17:51:04.151638"
+    },
+    {
+      "message": "bro i broke up with my anime girlfriend i need to learn how to get over her i cant take this shit anymore",
+      "analysis": {
+        "scores": {
+          "affective": 0.5512,
+          "agency": 0.3771,
+          "cognitive": 0.0717
+        },
+        "dominant": "affective"
+      },
+      "timestamp": "2026-04-01T17:51:26.234004"
     }
   ]
 }

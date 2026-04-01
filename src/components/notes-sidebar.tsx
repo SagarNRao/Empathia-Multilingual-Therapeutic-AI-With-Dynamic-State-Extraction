@@ -28,7 +28,7 @@ function categoryStyle(category: string) {
 
 type Props = { notes: NotesMap };
 
-export default function NotesSidebar({ notes }: Props) {
+export function NotesSidebar({ notes }: Props) {
   const entries = Object.values(notes);
 
   return (
