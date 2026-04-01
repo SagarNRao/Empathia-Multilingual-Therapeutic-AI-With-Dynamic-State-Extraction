@@ -27,7 +27,7 @@ export default function Home() {
     {
       role: "assistant",
       content:
-        "Hey, I'm Indy — your ADHD copilot. What's on your mind today?",
+        "hi bro what scene today",
     },
   ]);
   const [notes, setNotes] = useState<NotesMap>({});

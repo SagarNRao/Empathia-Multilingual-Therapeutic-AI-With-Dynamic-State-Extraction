@@ -478,6 +478,174 @@
           }
         ]
       }
+    },
+    {
+      "role": "user",
+      "content": "hi",
+      "timestamp": "2026-04-01T18:04:24.240263"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey there! How's your day going?",
+      "timestamp": "2026-04-01T18:04:24.240263",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.5091,
+          "cognitive": 0.2688,
+          "affective": 0.2221
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-01",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "hi",
+      "timestamp": "2026-04-01T18:04:27.496685"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey! What's on your mind today?",
+      "timestamp": "2026-04-01T18:04:27.496685",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.5091,
+          "cognitive": 0.2688,
+          "affective": 0.2221
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-01",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "talk in bangalore english",
+      "timestamp": "2026-04-01T18:04:50.659890"
+    },
+    {
+      "role": "assistant",
+      "content": "Sure thing, buddy! What's up today?",
+      "timestamp": "2026-04-01T18:04:50.659890",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.4837,
+          "cognitive": 0.3274,
+          "affective": 0.1889
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-01",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "i need to learn how to do a backflip",
+      "timestamp": "2026-04-01T18:05:02.592551"
+    },
+    {
+      "role": "assistant",
+      "content": "That sounds exciting! Start with solid core and shoulder strength, practice on a soft mat or with a trainer, and take it step\u2011by\u2011step.",
+      "timestamp": "2026-04-01T18:05:02.592551",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.7524,
+          "affective": 0.1435,
+          "cognitive": 0.1041
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-01",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "that is my goal bro",
+      "timestamp": "2026-04-01T18:05:20.441932"
+    },
+    {
+      "role": "assistant",
+      "content": "That\u2019s an awesome goal\u2014keep at it and you\u2019ll nail that backflip!",
+      "timestamp": "2026-04-01T18:05:20.441932",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.7031,
+          "cognitive": 0.208,
+          "affective": 0.0889
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-01",
+        "session_type": "brain_dump",
+        "notes": [
+          {
+            "title": "backflip_goal",
+            "content": "Wants to learn how to do a backflip",
+            "category": "goal"
+          }
+        ]
+      }
+    },
+    {
+      "role": "user",
+      "content": "i need to learn cooking",
+      "timestamp": "2026-04-01T18:05:36.757195"
+    },
+    {
+      "role": "assistant",
+      "content": "That\u2019s a great skill to pick up\u2014let\u2019s get you cooking!",
+      "timestamp": "2026-04-01T18:05:36.757195",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.7776,
+          "cognitive": 0.1219,
+          "affective": 0.1005
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-01",
+        "session_type": "brain_dump",
+        "notes": [
+          {
+            "title": "cooking_goal",
+            "content": "Wants to learn cooking",
+            "category": "goal"
+          }
+        ]
+      }
     }
   ],
   "cognitive_shifts": [
@@ -684,6 +852,78 @@
         "dominant": "affective"
       },
       "timestamp": "2026-04-01T17:51:26.234004"
+    },
+    {
+      "message": "hi",
+      "analysis": {
+        "scores": {
+          "agency": 0.5091,
+          "cognitive": 0.2688,
+          "affective": 0.2221
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-01T18:04:24.240263"
+    },
+    {
+      "message": "hi",
+      "analysis": {
+        "scores": {
+          "agency": 0.5091,
+          "cognitive": 0.2688,
+          "affective": 0.2221
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-01T18:04:27.496685"
+    },
+    {
+      "message": "talk in bangalore english",
+      "analysis": {
+        "scores": {
+          "agency": 0.4837,
+          "cognitive": 0.3274,
+          "affective": 0.1889
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-01T18:04:50.659890"
+    },
+    {
+      "message": "i need to learn how to do a backflip",
+      "analysis": {
+        "scores": {
+          "agency": 0.7524,
+          "affective": 0.1435,
+          "cognitive": 0.1041
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-01T18:05:02.592551"
+    },
+    {
+      "message": "that is my goal bro",
+      "analysis": {
+        "scores": {
+          "agency": 0.7031,
+          "cognitive": 0.208,
+          "affective": 0.0889
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-01T18:05:20.441932"
+    },
+    {
+      "message": "i need to learn cooking",
+      "analysis": {
+        "scores": {
+          "agency": 0.7776,
+          "cognitive": 0.1219,
+          "affective": 0.1005
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-01T18:05:36.757195"
     }
   ]
 }
