@@ -37,6 +37,10 @@ export type CognitiveShift = {
 
 const SESSION_ID = 1;
 
+// Server Configuration
+const CHAT_SERVER = "http://localhost:8000"; // Main server (LLM + session management)
+// Note: The main server internally calls the NLP server at http://localhost:8001
+
 export default function Home() {
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -50,6 +54,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [showGraph, setShowGraph] = useState(false);
   const [cognitiveShifts, setCognitiveShifts] = useState<CognitiveShift[]>([]);
+  const [serverError, setServerError] = useState<string | null>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -58,13 +63,16 @@ export default function Home() {
 
   async function fetchCognitiveShifts() {
     try {
-      const res = await fetch(`http://localhost:8000/sessions/${SESSION_ID}/cognitive-shifts`);
+      setServerError(null);
+      const res = await fetch(`${CHAT_SERVER}/sessions/${SESSION_ID}/cognitive-shifts`);
       if (!res.ok) throw new Error("Failed to fetch cognitive shifts");
       const data = await res.json();
       setCognitiveShifts(data.shifts);
       setShowGraph(true);
     } catch (error) {
-      console.error("Error fetching cognitive shifts:", error);
+      const errorMsg = `Error fetching cognitive shifts: ${error instanceof Error ? error.message : String(error)}`;
+      console.error(errorMsg);
+      setServerError(errorMsg);
     }
   }
 
@@ -79,9 +87,10 @@ export default function Home() {
     setMessages(newMessages);
     setInput("");
     setLoading(true);
+    setServerError(null);
 
     try {
-      const res = await fetch("http://localhost:8000/chat", {
+      const res = await fetch(`${CHAT_SERVER}/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -118,12 +127,14 @@ export default function Home() {
 
         setNotes((prev) => ({ ...prev, ...incoming }));
       }
-    } catch {
+    } catch (error) {
+      const errorMsg = error instanceof Error ? error.message : String(error);
+      setServerError(errorMsg);
       setMessages((prev) => [
         ...prev,
         {
           role: "assistant",
-          content: "Sorry, I couldn't connect to the server. Is the backend running?",
+          content: `Sorry, I couldn't connect to the server. Is the backend running?\n\nError: ${errorMsg}`,
         },
       ]);
     } finally {
@@ -144,10 +155,15 @@ export default function Home() {
       <div className="flex flex-col flex-1 min-w-0">
         {/* Header */}
         <div className="px-6 py-4 border-b border-white/[0.06] flex items-center gap-3">
-          <div className="w-2 h-2 rounded-full bg-[#c8a96e] animate-pulse" />
+          <div className={`w-2 h-2 rounded-full ${serverError ? 'bg-red-500' : 'bg-[#c8a96e]'} ${!serverError && 'animate-pulse'}`} />
           <span className="text-sm font-medium tracking-widest uppercase text-[#c8a96e]">
             Indy
           </span>
+          {serverError && (
+            <span className="text-xs text-red-400 ml-auto mr-2">
+              ⚠️ Server: {serverError}
+            </span>
+          )}
           <span className="text-xs text-white/30 ml-auto">Session {SESSION_ID}</span>
           <Button
             onClick={fetchCognitiveShifts}

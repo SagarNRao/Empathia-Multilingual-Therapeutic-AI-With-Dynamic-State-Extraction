@@ -846,6 +846,63 @@
           }
         ]
       }
+    },
+    {
+      "role": "user",
+      "content": "hello",
+      "timestamp": "2026-04-04T16:21:58.087139"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey there! How can I support you today?",
+      "timestamp": "2026-04-04T16:21:58.087139",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.7029,
+          "cognitive": 0.1076,
+          "agency": 0.1895
+        },
+        "dominant": "affective"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-04",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "i will learn how to do a backflip",
+      "timestamp": "2026-04-04T16:22:11.649996"
+    },
+    {
+      "role": "assistant",
+      "content": "That sounds exciting! Good luck with mastering the backflip.",
+      "timestamp": "2026-04-04T16:22:11.649996",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.0011,
+          "cognitive": 0.001,
+          "agency": 0.9978
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-04",
+        "session_type": "brain_dump",
+        "notes": [
+          {
+            "title": "backflip_goal",
+            "content": "Wants to learn how to do a backflip",
+            "category": "goal"
+          }
+        ]
+      }
     }
   ],
   "cognitive_shifts": [
@@ -1208,6 +1265,30 @@
         "dominant": "agency"
       },
       "timestamp": "2026-04-04T16:11:45.329833"
+    },
+    {
+      "message": "hello",
+      "analysis": {
+        "scores": {
+          "affective": 0.7029,
+          "cognitive": 0.1076,
+          "agency": 0.1895
+        },
+        "dominant": "affective"
+      },
+      "timestamp": "2026-04-04T16:21:58.087139"
+    },
+    {
+      "message": "i will learn how to do a backflip",
+      "analysis": {
+        "scores": {
+          "affective": 0.0011,
+          "cognitive": 0.001,
+          "agency": 0.9978
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-04T16:22:11.649996"
     }
   ]
 }
