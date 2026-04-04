@@ -646,6 +646,87 @@
           }
         ]
       }
+    },
+    {
+      "role": "user",
+      "content": "hello",
+      "timestamp": "2026-04-04T15:54:03.986958"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey there! How are you feeling today?",
+      "timestamp": "2026-04-04T15:54:03.986958",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.483,
+          "affective": 0.2989,
+          "cognitive": 0.2181
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-04",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "i am sad :(((((",
+      "timestamp": "2026-04-04T15:54:09.248714"
+    },
+    {
+      "role": "assistant",
+      "content": "I\u2019m really sorry you\u2019re feeling this way\u2014sending you a big, gentle hug. If you want to talk about what\u2019s on your mind, I\u2019m here.",
+      "timestamp": "2026-04-04T15:54:09.248714",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.8946,
+          "agency": 0.0812,
+          "cognitive": 0.0241
+        },
+        "dominant": "affective"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-04",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "hello",
+      "timestamp": "2026-04-04T15:58:58.421554"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey there! How can I help you today?",
+      "timestamp": "2026-04-04T15:58:58.421554",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.483,
+          "affective": 0.2989,
+          "cognitive": 0.2181
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-04",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
     }
   ],
   "cognitive_shifts": [
@@ -924,6 +1005,42 @@
         "dominant": "agency"
       },
       "timestamp": "2026-04-01T18:05:36.757195"
+    },
+    {
+      "message": "hello",
+      "analysis": {
+        "scores": {
+          "agency": 0.483,
+          "affective": 0.2989,
+          "cognitive": 0.2181
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-04T15:54:03.986958"
+    },
+    {
+      "message": "i am sad :(((((",
+      "analysis": {
+        "scores": {
+          "affective": 0.8946,
+          "agency": 0.0812,
+          "cognitive": 0.0241
+        },
+        "dominant": "affective"
+      },
+      "timestamp": "2026-04-04T15:54:09.248714"
+    },
+    {
+      "message": "hello",
+      "analysis": {
+        "scores": {
+          "agency": 0.483,
+          "affective": 0.2989,
+          "cognitive": 0.2181
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-04T15:58:58.421554"
     }
   ]
 }

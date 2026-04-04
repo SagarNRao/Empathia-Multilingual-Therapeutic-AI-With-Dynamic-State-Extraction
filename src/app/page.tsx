@@ -1,11 +1,16 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Send } from "lucide-react";
+import { Send, BarChart3, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { NotesSidebar } from "@/components/notes-sidebar";
+import dynamic from "next/dynamic";
+
+const CognitiveShiftChart = dynamic(() => import("@/components/cognitive-shift-chart"), {
+  ssr: false,
+});
 
 export type Note = {
   title: string;
@@ -17,6 +22,16 @@ export type NotesMap = Record<string, Note>;
 
 export type Message = {
   role: "user" | "assistant";
+  content: string;
+};
+
+export type CognitiveShift = {
+  message_num: number;
+  affective: number;
+  cognitive: number;
+  agency: number;
+  dominant: string;
+  timestamp: string;
   content: string;
 };
 
@@ -33,11 +48,25 @@ export default function Home() {
   const [notes, setNotes] = useState<NotesMap>({});
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showGraph, setShowGraph] = useState(false);
+  const [cognitiveShifts, setCognitiveShifts] = useState<CognitiveShift[]>([]);
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
+
+  async function fetchCognitiveShifts() {
+    try {
+      const res = await fetch(`http://localhost:8000/sessions/${SESSION_ID}/cognitive-shifts`);
+      if (!res.ok) throw new Error("Failed to fetch cognitive shifts");
+      const data = await res.json();
+      setCognitiveShifts(data.shifts);
+      setShowGraph(true);
+    } catch (error) {
+      console.error("Error fetching cognitive shifts:", error);
+    }
+  }
 
   async function sendMessage() {
     const text = input.trim();
@@ -120,6 +149,15 @@ export default function Home() {
             Indy
           </span>
           <span className="text-xs text-white/30 ml-auto">Session {SESSION_ID}</span>
+          <Button
+            onClick={fetchCognitiveShifts}
+            variant="ghost"
+            size="sm"
+            className="text-[#c8a96e] hover:text-[#e8e3d9] hover:bg-white/[0.04]"
+            title="View cognitive shift graph"
+          >
+            <BarChart3 className="w-4 h-4" />
+          </Button>
         </div>
 
         {/* Messages */}
@@ -187,6 +225,31 @@ export default function Home() {
 
       {/* Sidebar */}
       <NotesSidebar notes={notes} />
+
+      {/* Cognitive Shift Graph Modal */}
+      {showGraph && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+          <div className="bg-[#1a1a1a] border border-white/[0.1] rounded-2xl p-6 max-w-4xl w-full max-h-[90vh] overflow-auto">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-semibold text-[#e8e3d9]">Cognitive Shift Over Time</h2>
+              <button
+                onClick={() => setShowGraph(false)}
+                className="text-white/40 hover:text-white/60 transition"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            
+            {cognitiveShifts.length > 0 ? (
+              <CognitiveShiftChart shifts={cognitiveShifts} />
+            ) : (
+              <div className="text-center py-8 text-white/40">
+                No cognitive shift data available yet
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -1,0 +1,12 @@
+{
+  "label2id": {
+    "affective": 0,
+    "cognitive": 1,
+    "agency": 2
+  },
+  "id2label": {
+    "0": "affective",
+    "1": "cognitive",
+    "2": "agency"
+  }
+}
