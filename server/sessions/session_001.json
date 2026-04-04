@@ -727,6 +727,125 @@
         "small_wins": [],
         "insights": []
       }
+    },
+    {
+      "role": "user",
+      "content": "hello",
+      "timestamp": "2026-04-04T16:09:46.339831"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey there! How\u2019s your day going?",
+      "timestamp": "2026-04-04T16:09:46.339831",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.483,
+          "affective": 0.2989,
+          "cognitive": 0.2181
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-04",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "hello",
+      "timestamp": "2026-04-04T16:10:46.033853"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey there! How\u2019s your day going?",
+      "timestamp": "2026-04-04T16:10:46.033853",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.483,
+          "affective": 0.2989,
+          "cognitive": 0.2181
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-04",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "i think im gay",
+      "timestamp": "2026-04-04T16:11:05.068185"
+    },
+    {
+      "role": "assistant",
+      "content": "That\u2019s an important thing to share, and I\u2019m glad you felt comfortable telling me. I\u2019m here to support you however you need.",
+      "timestamp": "2026-04-04T16:11:05.068185",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.4407,
+          "cognitive": 0.3757,
+          "agency": 0.1836
+        },
+        "dominant": "affective"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-04",
+        "session_type": "brain_dump",
+        "notes": [
+          {
+            "title": "sexual_orientation",
+            "content": "User thinks they are gay",
+            "category": "identity"
+          }
+        ]
+      }
+    },
+    {
+      "role": "user",
+      "content": "I will complete this project by next week",
+      "timestamp": "2026-04-04T16:11:45.329833"
+    },
+    {
+      "role": "assistant",
+      "content": "That sounds like a solid plan\u2014good luck wrapping it up!",
+      "timestamp": "2026-04-04T16:11:45.329833",
+      "cognitive_shift": {
+        "scores": {
+          "agency": 0.928,
+          "cognitive": 0.0452,
+          "affective": 0.0267
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-04",
+        "session_type": "brain_dump",
+        "notes": [
+          {
+            "title": "sexual_orientation",
+            "content": "User identified as gay",
+            "category": "self_identity"
+          },
+          {
+            "title": "project_goal",
+            "content": "User aims to complete a project by next week",
+            "category": "goal"
+          }
+        ]
+      }
     }
   ],
   "cognitive_shifts": [
@@ -1041,6 +1160,54 @@
         "dominant": "agency"
       },
       "timestamp": "2026-04-04T15:58:58.421554"
+    },
+    {
+      "message": "hello",
+      "analysis": {
+        "scores": {
+          "agency": 0.483,
+          "affective": 0.2989,
+          "cognitive": 0.2181
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-04T16:09:46.339831"
+    },
+    {
+      "message": "hello",
+      "analysis": {
+        "scores": {
+          "agency": 0.483,
+          "affective": 0.2989,
+          "cognitive": 0.2181
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-04T16:10:46.033853"
+    },
+    {
+      "message": "i think im gay",
+      "analysis": {
+        "scores": {
+          "affective": 0.4407,
+          "cognitive": 0.3757,
+          "agency": 0.1836
+        },
+        "dominant": "affective"
+      },
+      "timestamp": "2026-04-04T16:11:05.068185"
+    },
+    {
+      "message": "I will complete this project by next week",
+      "analysis": {
+        "scores": {
+          "agency": 0.928,
+          "cognitive": 0.0452,
+          "affective": 0.0267
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-04T16:11:45.329833"
     }
   ]
 }
