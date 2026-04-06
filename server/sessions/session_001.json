@@ -1,861 +1,16 @@
 {
   "session_id": 1,
-  "created": "2026-04-01T17:27:17.505974",
+  "created": "2026-04-04T16:30:26.104294",
   "conversation": [
     {
       "role": "user",
-      "content": "dude i am so sad",
-      "timestamp": "2026-04-01T17:27:17.505974"
-    },
-    {
-      "role": "assistant",
-      "content": "I\u2019m really sorry you\u2019re feeling this way. If you want to talk about what\u2019s behind the sadness, I\u2019m here.",
-      "timestamp": "2026-04-01T17:27:17.505974",
-      "cognitive_shift": {
-        "scores": {
-          "affective": 0.8217,
-          "agency": 0.1399,
-          "cognitive": 0.0384
-        },
-        "dominant": "affective"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
-      "content": "My name is bottleman",
-      "timestamp": "2026-04-01T17:27:20.792312"
-    },
-    {
-      "role": "assistant",
-      "content": "Nice to meet you, Bottleman!",
-      "timestamp": "2026-04-01T17:27:20.792312",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.7154,
-          "affective": 0.1652,
-          "cognitive": 0.1194
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "notes": [
-          {
-            "title": "user_name",
-            "content": "bottleman",
-            "category": "personal_info"
-          }
-        ]
-      }
-    },
-    {
-      "role": "user",
-      "content": "i need to learn how to backflip",
-      "timestamp": "2026-04-01T17:27:28.310701"
-    },
-    {
-      "role": "assistant",
-      "content": "That sounds like a fun challenge\u2014good luck with the backflip training!",
-      "timestamp": "2026-04-01T17:27:28.310701",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.7284,
-          "affective": 0.1608,
-          "cognitive": 0.1108
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "notes": [
-          {
-            "title": "learn_backflip",
-            "content": "Wants to learn how to do a backflip",
-            "category": "goal"
-          }
-        ]
-      }
-    },
-    {
-      "role": "user",
-      "content": "quit",
-      "timestamp": "2026-04-01T17:27:30.989052"
-    },
-    {
-      "role": "assistant",
-      "content": "Take care, and feel free to return whenever you\u2019d like.",
-      "timestamp": "2026-04-01T17:27:30.989052",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.5605,
-          "affective": 0.3467,
-          "cognitive": 0.0928
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
-      "content": "can you tell me a joke",
-      "timestamp": "2026-04-01T17:31:43.899648"
-    },
-    {
-      "role": "assistant",
-      "content": "Sure! Why did the scarecrow become a successful motivational speaker? Because he was outstanding in his field!",
-      "timestamp": "2026-04-01T17:31:43.899648",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.6697,
-          "cognitive": 0.2196,
-          "affective": 0.1107
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
       "content": "hello",
-      "timestamp": "2026-04-01T17:31:51.377638"
+      "timestamp": "2026-04-04T16:30:26.104294"
     },
     {
       "role": "assistant",
-      "content": "Hey there! Hope you\u2019re having a great day.",
-      "timestamp": "2026-04-01T17:31:51.377638",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.483,
-          "affective": 0.2989,
-          "cognitive": 0.2181
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
-      "content": "e",
-      "timestamp": "2026-04-01T17:46:47.239109"
-    },
-    {
-      "role": "assistant",
-      "content": "Hey there! How can I support you today?",
-      "timestamp": "2026-04-01T17:46:47.239109",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.5262,
-          "cognitive": 0.2501,
-          "affective": 0.2237
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
-      "content": "i need to learn how to do a backflip that is my priority",
-      "timestamp": "2026-04-01T17:47:02.943868"
-    },
-    {
-      "role": "assistant",
-      "content": "That sounds exciting\u2014making a backflip your priority! Let\u2019s break it down into steps so it feels doable.",
-      "timestamp": "2026-04-01T17:47:02.943868",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.7501,
-          "affective": 0.1854,
-          "cognitive": 0.0645
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "notes": [
-          {
-            "title": "learn_backflip",
-            "content": "Wants to learn how to do a backflip and makes it a priority",
-            "category": "goal"
-          }
-        ]
-      }
-    },
-    {
-      "role": "user",
-      "content": "hello bro",
-      "timestamp": "2026-04-01T17:47:49.250551"
-    },
-    {
-      "role": "assistant",
-      "content": "Hey there! How can I support you today?",
-      "timestamp": "2026-04-01T17:47:49.250551",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.4154,
-          "affective": 0.3321,
-          "cognitive": 0.2525
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
-      "content": "hello bro",
-      "timestamp": "2026-04-01T17:48:49.872110"
-    },
-    {
-      "role": "assistant",
-      "content": "Hey there! How can I support you today?",
-      "timestamp": "2026-04-01T17:48:49.872110",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.4154,
-          "affective": 0.3321,
-          "cognitive": 0.2525
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
-      "content": "i need to learn how to fight snakes",
-      "timestamp": "2026-04-01T17:48:59.659237"
-    },
-    {
-      "role": "assistant",
-      "content": "I\u2019m sorry, but I can\u2019t help with that.",
-      "timestamp": "2026-04-01T17:48:59.659237",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.707,
-          "affective": 0.1709,
-          "cognitive": 0.1221
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
-      "content": "arent you a therapy bot",
-      "timestamp": "2026-04-01T17:49:19.183201"
-    },
-    {
-      "role": "assistant",
-      "content": "I\u2019m here to listen and help you with ADHD\u2011related challenges. How can I support you today?",
-      "timestamp": "2026-04-01T17:49:19.183201",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.4198,
-          "affective": 0.414,
-          "cognitive": 0.1661
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
-      "content": "i need to learn how to get over breakup",
-      "timestamp": "2026-04-01T17:49:44.195098"
-    },
-    {
-      "role": "assistant",
-      "content": "I\u2019m really sorry you\u2019re going through this; take things one step at a time and be gentle with yourself.",
-      "timestamp": "2026-04-01T17:49:44.195098",
-      "cognitive_shift": {
-        "scores": {
-          "affective": 0.7021,
-          "cognitive": 0.1658,
-          "agency": 0.1321
-        },
-        "dominant": "affective"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "notes": [
-          {
-            "title": "relationship_breakup",
-            "content": "User is dealing with a breakup and seeking ways to get over it",
-            "category": "emotional_challenge"
-          }
-        ]
-      }
-    },
-    {
-      "role": "user",
-      "content": "hello bro",
-      "timestamp": "2026-04-01T17:50:07.634137"
-    },
-    {
-      "role": "assistant",
-      "content": "Hey there! How can I support you today?",
-      "timestamp": "2026-04-01T17:50:07.634137",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.4154,
-          "affective": 0.3321,
-          "cognitive": 0.2525
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
-      "content": "i broke up with my anime girlfriend i need to learn how to get over her that is my priority no.1",
-      "timestamp": "2026-04-01T17:50:30.124565"
-    },
-    {
-      "role": "assistant",
-      "content": "I\u2019m really sorry you\u2019re going through this\u2014focusing on healing sounds like a solid first step. Let\u2019s take it one day at a time.",
-      "timestamp": "2026-04-01T17:50:30.124565",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.5257,
-          "affective": 0.3548,
-          "cognitive": 0.1195
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "notes": [
-          {
-            "title": "breakup_anime_girlfriend",
-            "content": "User broke up with their anime girlfriend and prioritizes learning how to get over her.",
-            "category": "relationship"
-          }
-        ]
-      }
-    },
-    {
-      "role": "user",
-      "content": "hello bro",
-      "timestamp": "2026-04-01T17:51:04.151638"
-    },
-    {
-      "role": "assistant",
-      "content": "Hey there! How can I support you today?",
-      "timestamp": "2026-04-01T17:51:04.151638",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.4154,
-          "affective": 0.3321,
-          "cognitive": 0.2525
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
-      "content": "bro i broke up with my anime girlfriend i need to learn how to get over her i cant take this shit anymore",
-      "timestamp": "2026-04-01T17:51:26.234004"
-    },
-    {
-      "role": "assistant",
-      "content": "I\u2019m really sorry you\u2019re going through this\u2014breakups can feel overwhelming, especially when it feels like a big part of your world is shifting. Let\u2019s take it one step at a time and find some gentle ways to start healing.",
-      "timestamp": "2026-04-01T17:51:26.234004",
-      "cognitive_shift": {
-        "scores": {
-          "affective": 0.5512,
-          "agency": 0.3771,
-          "cognitive": 0.0717
-        },
-        "dominant": "affective"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "notes": [
-          {
-            "title": "breakup_anime_girlfriend",
-            "content": "User broke up with their anime girlfriend and feels unable to cope, seeking ways to move on.",
-            "category": "relationship"
-          }
-        ]
-      }
-    },
-    {
-      "role": "user",
-      "content": "hi",
-      "timestamp": "2026-04-01T18:04:24.240263"
-    },
-    {
-      "role": "assistant",
-      "content": "Hey there! How's your day going?",
-      "timestamp": "2026-04-01T18:04:24.240263",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.5091,
-          "cognitive": 0.2688,
-          "affective": 0.2221
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
-      "content": "hi",
-      "timestamp": "2026-04-01T18:04:27.496685"
-    },
-    {
-      "role": "assistant",
-      "content": "Hey! What's on your mind today?",
-      "timestamp": "2026-04-01T18:04:27.496685",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.5091,
-          "cognitive": 0.2688,
-          "affective": 0.2221
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
-      "content": "talk in bangalore english",
-      "timestamp": "2026-04-01T18:04:50.659890"
-    },
-    {
-      "role": "assistant",
-      "content": "Sure thing, buddy! What's up today?",
-      "timestamp": "2026-04-01T18:04:50.659890",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.4837,
-          "cognitive": 0.3274,
-          "affective": 0.1889
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
-      "content": "i need to learn how to do a backflip",
-      "timestamp": "2026-04-01T18:05:02.592551"
-    },
-    {
-      "role": "assistant",
-      "content": "That sounds exciting! Start with solid core and shoulder strength, practice on a soft mat or with a trainer, and take it step\u2011by\u2011step.",
-      "timestamp": "2026-04-01T18:05:02.592551",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.7524,
-          "affective": 0.1435,
-          "cognitive": 0.1041
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
-      "content": "that is my goal bro",
-      "timestamp": "2026-04-01T18:05:20.441932"
-    },
-    {
-      "role": "assistant",
-      "content": "That\u2019s an awesome goal\u2014keep at it and you\u2019ll nail that backflip!",
-      "timestamp": "2026-04-01T18:05:20.441932",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.7031,
-          "cognitive": 0.208,
-          "affective": 0.0889
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "notes": [
-          {
-            "title": "backflip_goal",
-            "content": "Wants to learn how to do a backflip",
-            "category": "goal"
-          }
-        ]
-      }
-    },
-    {
-      "role": "user",
-      "content": "i need to learn cooking",
-      "timestamp": "2026-04-01T18:05:36.757195"
-    },
-    {
-      "role": "assistant",
-      "content": "That\u2019s a great skill to pick up\u2014let\u2019s get you cooking!",
-      "timestamp": "2026-04-01T18:05:36.757195",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.7776,
-          "cognitive": 0.1219,
-          "affective": 0.1005
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-01",
-        "session_type": "brain_dump",
-        "notes": [
-          {
-            "title": "cooking_goal",
-            "content": "Wants to learn cooking",
-            "category": "goal"
-          }
-        ]
-      }
-    },
-    {
-      "role": "user",
-      "content": "hello",
-      "timestamp": "2026-04-04T15:54:03.986958"
-    },
-    {
-      "role": "assistant",
-      "content": "Hey there! How are you feeling today?",
-      "timestamp": "2026-04-04T15:54:03.986958",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.483,
-          "affective": 0.2989,
-          "cognitive": 0.2181
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-04",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
-      "content": "i am sad :(((((",
-      "timestamp": "2026-04-04T15:54:09.248714"
-    },
-    {
-      "role": "assistant",
-      "content": "I\u2019m really sorry you\u2019re feeling this way\u2014sending you a big, gentle hug. If you want to talk about what\u2019s on your mind, I\u2019m here.",
-      "timestamp": "2026-04-04T15:54:09.248714",
-      "cognitive_shift": {
-        "scores": {
-          "affective": 0.8946,
-          "agency": 0.0812,
-          "cognitive": 0.0241
-        },
-        "dominant": "affective"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-04",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
-      "content": "hello",
-      "timestamp": "2026-04-04T15:58:58.421554"
-    },
-    {
-      "role": "assistant",
-      "content": "Hey there! How can I help you today?",
-      "timestamp": "2026-04-04T15:58:58.421554",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.483,
-          "affective": 0.2989,
-          "cognitive": 0.2181
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-04",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
-      "content": "hello",
-      "timestamp": "2026-04-04T16:09:46.339831"
-    },
-    {
-      "role": "assistant",
-      "content": "Hey there! How\u2019s your day going?",
-      "timestamp": "2026-04-04T16:09:46.339831",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.483,
-          "affective": 0.2989,
-          "cognitive": 0.2181
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-04",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
-      "content": "hello",
-      "timestamp": "2026-04-04T16:10:46.033853"
-    },
-    {
-      "role": "assistant",
-      "content": "Hey there! How\u2019s your day going?",
-      "timestamp": "2026-04-04T16:10:46.033853",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.483,
-          "affective": 0.2989,
-          "cognitive": 0.2181
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-04",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
-      "content": "i think im gay",
-      "timestamp": "2026-04-04T16:11:05.068185"
-    },
-    {
-      "role": "assistant",
-      "content": "That\u2019s an important thing to share, and I\u2019m glad you felt comfortable telling me. I\u2019m here to support you however you need.",
-      "timestamp": "2026-04-04T16:11:05.068185",
-      "cognitive_shift": {
-        "scores": {
-          "affective": 0.4407,
-          "cognitive": 0.3757,
-          "agency": 0.1836
-        },
-        "dominant": "affective"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-04",
-        "session_type": "brain_dump",
-        "notes": [
-          {
-            "title": "sexual_orientation",
-            "content": "User thinks they are gay",
-            "category": "identity"
-          }
-        ]
-      }
-    },
-    {
-      "role": "user",
-      "content": "I will complete this project by next week",
-      "timestamp": "2026-04-04T16:11:45.329833"
-    },
-    {
-      "role": "assistant",
-      "content": "That sounds like a solid plan\u2014good luck wrapping it up!",
-      "timestamp": "2026-04-04T16:11:45.329833",
-      "cognitive_shift": {
-        "scores": {
-          "agency": 0.928,
-          "cognitive": 0.0452,
-          "affective": 0.0267
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-04",
-        "session_type": "brain_dump",
-        "notes": [
-          {
-            "title": "sexual_orientation",
-            "content": "User identified as gay",
-            "category": "self_identity"
-          },
-          {
-            "title": "project_goal",
-            "content": "User aims to complete a project by next week",
-            "category": "goal"
-          }
-        ]
-      }
-    },
-    {
-      "role": "user",
-      "content": "hello",
-      "timestamp": "2026-04-04T16:21:58.087139"
-    },
-    {
-      "role": "assistant",
-      "content": "Hey there! How can I support you today?",
-      "timestamp": "2026-04-04T16:21:58.087139",
+      "content": "Hey there! Hope you\u2019re having a good day.",
+      "timestamp": "2026-04-04T16:30:26.104294",
       "cognitive_shift": {
         "scores": {
           "affective": 0.7029,
@@ -876,397 +31,121 @@
     },
     {
       "role": "user",
-      "content": "i will learn how to do a backflip",
-      "timestamp": "2026-04-04T16:22:11.649996"
+      "content": "hello bro",
+      "timestamp": "2026-04-06T18:16:08.574747"
     },
     {
       "role": "assistant",
-      "content": "That sounds exciting! Good luck with mastering the backflip.",
-      "timestamp": "2026-04-04T16:22:11.649996",
+      "content": "Hey there! Hope you're having a good day.",
+      "timestamp": "2026-04-06T18:16:08.574747",
       "cognitive_shift": {
         "scores": {
-          "affective": 0.0011,
-          "cognitive": 0.001,
-          "agency": 0.9978
+          "affective": 0.7382,
+          "cognitive": 0.0406,
+          "agency": 0.2212
+        },
+        "dominant": "affective"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-06",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "nah bro i just broke up with my anime girlfriend, i need to get over her.",
+      "timestamp": "2026-04-06T18:16:38.010651"
+    },
+    {
+      "role": "assistant",
+      "content": "I\u2019m really sorry you\u2019re going through that\u2014take it one step at a time and be kind to yourself.",
+      "timestamp": "2026-04-06T18:16:38.010651",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.1382,
+          "cognitive": 0.0028,
+          "agency": 0.859
         },
         "dominant": "agency"
       },
       "notes": {
         "session_id": 1,
-        "date": "2026-04-04",
+        "date": "2026-04-06",
         "session_type": "brain_dump",
         "notes": [
           {
-            "title": "backflip_goal",
-            "content": "Wants to learn how to do a backflip",
-            "category": "goal"
+            "title": "breakup_anime_girlfriend",
+            "content": "User recently broke up with their anime girlfriend and wants to get over her.",
+            "category": "relationship"
           }
         ]
+      }
+    },
+    {
+      "role": "user",
+      "content": "my triggers are when she says things in japanese and i cant understand shit",
+      "timestamp": "2026-04-06T18:17:04.868697"
+    },
+    {
+      "role": "assistant",
+      "content": "I hear you\u2014those moments can feel especially painful.",
+      "timestamp": "2026-04-06T18:17:04.868697",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.9938,
+          "cognitive": 0.0053,
+          "agency": 0.0009
+        },
+        "dominant": "affective"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-06",
+        "session_type": "brain_dump",
+        "notes": [
+          {
+            "title": "language_trigger",
+            "content": "Gets triggered when ex speaks Japanese and they can't understand",
+            "category": "trigger"
+          }
+        ]
+      }
+    },
+    {
+      "role": "user",
+      "content": "does hair grow back if you beat cancer",
+      "timestamp": "2026-04-06T18:23:46.587313"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes\u2014after most cancer treatments like chemotherapy, hair usually starts growing back once the treatment ends, though the texture or color might change a bit. If you have specific concerns, your doctor can give you the most accurate info for your situation.",
+      "timestamp": "2026-04-06T18:23:46.587313",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.0897,
+          "cognitive": 0.9078,
+          "agency": 0.0026
+        },
+        "dominant": "cognitive"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-06",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
       }
     }
   ],
   "cognitive_shifts": [
     {
-      "message": "dude i am so sad",
-      "analysis": {
-        "scores": {
-          "affective": 0.8217,
-          "agency": 0.1399,
-          "cognitive": 0.0384
-        },
-        "dominant": "affective"
-      },
-      "timestamp": "2026-04-01T17:27:17.505974"
-    },
-    {
-      "message": "My name is bottleman",
-      "analysis": {
-        "scores": {
-          "agency": 0.7154,
-          "affective": 0.1652,
-          "cognitive": 0.1194
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-01T17:27:20.792312"
-    },
-    {
-      "message": "i need to learn how to backflip",
-      "analysis": {
-        "scores": {
-          "agency": 0.7284,
-          "affective": 0.1608,
-          "cognitive": 0.1108
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-01T17:27:28.310701"
-    },
-    {
-      "message": "quit",
-      "analysis": {
-        "scores": {
-          "agency": 0.5605,
-          "affective": 0.3467,
-          "cognitive": 0.0928
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-01T17:27:30.989052"
-    },
-    {
-      "message": "can you tell me a joke",
-      "analysis": {
-        "scores": {
-          "agency": 0.6697,
-          "cognitive": 0.2196,
-          "affective": 0.1107
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-01T17:31:43.899648"
-    },
-    {
-      "message": "hello",
-      "analysis": {
-        "scores": {
-          "agency": 0.483,
-          "affective": 0.2989,
-          "cognitive": 0.2181
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-01T17:31:51.377638"
-    },
-    {
-      "message": "e",
-      "analysis": {
-        "scores": {
-          "agency": 0.5262,
-          "cognitive": 0.2501,
-          "affective": 0.2237
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-01T17:46:47.239109"
-    },
-    {
-      "message": "i need to learn how to do a backflip that is my priority",
-      "analysis": {
-        "scores": {
-          "agency": 0.7501,
-          "affective": 0.1854,
-          "cognitive": 0.0645
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-01T17:47:02.943868"
-    },
-    {
-      "message": "hello bro",
-      "analysis": {
-        "scores": {
-          "agency": 0.4154,
-          "affective": 0.3321,
-          "cognitive": 0.2525
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-01T17:47:49.250551"
-    },
-    {
-      "message": "hello bro",
-      "analysis": {
-        "scores": {
-          "agency": 0.4154,
-          "affective": 0.3321,
-          "cognitive": 0.2525
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-01T17:48:49.872110"
-    },
-    {
-      "message": "i need to learn how to fight snakes",
-      "analysis": {
-        "scores": {
-          "agency": 0.707,
-          "affective": 0.1709,
-          "cognitive": 0.1221
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-01T17:48:59.659237"
-    },
-    {
-      "message": "arent you a therapy bot",
-      "analysis": {
-        "scores": {
-          "agency": 0.4198,
-          "affective": 0.414,
-          "cognitive": 0.1661
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-01T17:49:19.183201"
-    },
-    {
-      "message": "i need to learn how to get over breakup",
-      "analysis": {
-        "scores": {
-          "affective": 0.7021,
-          "cognitive": 0.1658,
-          "agency": 0.1321
-        },
-        "dominant": "affective"
-      },
-      "timestamp": "2026-04-01T17:49:44.195098"
-    },
-    {
-      "message": "hello bro",
-      "analysis": {
-        "scores": {
-          "agency": 0.4154,
-          "affective": 0.3321,
-          "cognitive": 0.2525
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-01T17:50:07.634137"
-    },
-    {
-      "message": "i broke up with my anime girlfriend i need to learn how to get over her that is my priority no.1",
-      "analysis": {
-        "scores": {
-          "agency": 0.5257,
-          "affective": 0.3548,
-          "cognitive": 0.1195
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-01T17:50:30.124565"
-    },
-    {
-      "message": "hello bro",
-      "analysis": {
-        "scores": {
-          "agency": 0.4154,
-          "affective": 0.3321,
-          "cognitive": 0.2525
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-01T17:51:04.151638"
-    },
-    {
-      "message": "bro i broke up with my anime girlfriend i need to learn how to get over her i cant take this shit anymore",
-      "analysis": {
-        "scores": {
-          "affective": 0.5512,
-          "agency": 0.3771,
-          "cognitive": 0.0717
-        },
-        "dominant": "affective"
-      },
-      "timestamp": "2026-04-01T17:51:26.234004"
-    },
-    {
-      "message": "hi",
-      "analysis": {
-        "scores": {
-          "agency": 0.5091,
-          "cognitive": 0.2688,
-          "affective": 0.2221
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-01T18:04:24.240263"
-    },
-    {
-      "message": "hi",
-      "analysis": {
-        "scores": {
-          "agency": 0.5091,
-          "cognitive": 0.2688,
-          "affective": 0.2221
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-01T18:04:27.496685"
-    },
-    {
-      "message": "talk in bangalore english",
-      "analysis": {
-        "scores": {
-          "agency": 0.4837,
-          "cognitive": 0.3274,
-          "affective": 0.1889
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-01T18:04:50.659890"
-    },
-    {
-      "message": "i need to learn how to do a backflip",
-      "analysis": {
-        "scores": {
-          "agency": 0.7524,
-          "affective": 0.1435,
-          "cognitive": 0.1041
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-01T18:05:02.592551"
-    },
-    {
-      "message": "that is my goal bro",
-      "analysis": {
-        "scores": {
-          "agency": 0.7031,
-          "cognitive": 0.208,
-          "affective": 0.0889
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-01T18:05:20.441932"
-    },
-    {
-      "message": "i need to learn cooking",
-      "analysis": {
-        "scores": {
-          "agency": 0.7776,
-          "cognitive": 0.1219,
-          "affective": 0.1005
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-01T18:05:36.757195"
-    },
-    {
-      "message": "hello",
-      "analysis": {
-        "scores": {
-          "agency": 0.483,
-          "affective": 0.2989,
-          "cognitive": 0.2181
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-04T15:54:03.986958"
-    },
-    {
-      "message": "i am sad :(((((",
-      "analysis": {
-        "scores": {
-          "affective": 0.8946,
-          "agency": 0.0812,
-          "cognitive": 0.0241
-        },
-        "dominant": "affective"
-      },
-      "timestamp": "2026-04-04T15:54:09.248714"
-    },
-    {
-      "message": "hello",
-      "analysis": {
-        "scores": {
-          "agency": 0.483,
-          "affective": 0.2989,
-          "cognitive": 0.2181
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-04T15:58:58.421554"
-    },
-    {
-      "message": "hello",
-      "analysis": {
-        "scores": {
-          "agency": 0.483,
-          "affective": 0.2989,
-          "cognitive": 0.2181
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-04T16:09:46.339831"
-    },
-    {
-      "message": "hello",
-      "analysis": {
-        "scores": {
-          "agency": 0.483,
-          "affective": 0.2989,
-          "cognitive": 0.2181
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-04T16:10:46.033853"
-    },
-    {
-      "message": "i think im gay",
-      "analysis": {
-        "scores": {
-          "affective": 0.4407,
-          "cognitive": 0.3757,
-          "agency": 0.1836
-        },
-        "dominant": "affective"
-      },
-      "timestamp": "2026-04-04T16:11:05.068185"
-    },
-    {
-      "message": "I will complete this project by next week",
-      "analysis": {
-        "scores": {
-          "agency": 0.928,
-          "cognitive": 0.0452,
-          "affective": 0.0267
-        },
-        "dominant": "agency"
-      },
-      "timestamp": "2026-04-04T16:11:45.329833"
-    },
-    {
       "message": "hello",
       "analysis": {
         "scores": {
@@ -1276,19 +155,55 @@
         },
         "dominant": "affective"
       },
-      "timestamp": "2026-04-04T16:21:58.087139"
+      "timestamp": "2026-04-04T16:30:26.104294"
     },
     {
-      "message": "i will learn how to do a backflip",
+      "message": "hello bro",
       "analysis": {
         "scores": {
-          "affective": 0.0011,
-          "cognitive": 0.001,
-          "agency": 0.9978
+          "affective": 0.7382,
+          "cognitive": 0.0406,
+          "agency": 0.2212
+        },
+        "dominant": "affective"
+      },
+      "timestamp": "2026-04-06T18:16:08.574747"
+    },
+    {
+      "message": "nah bro i just broke up with my anime girlfriend, i need to get over her.",
+      "analysis": {
+        "scores": {
+          "affective": 0.1382,
+          "cognitive": 0.0028,
+          "agency": 0.859
         },
         "dominant": "agency"
       },
-      "timestamp": "2026-04-04T16:22:11.649996"
+      "timestamp": "2026-04-06T18:16:38.011256"
+    },
+    {
+      "message": "my triggers are when she says things in japanese and i cant understand shit",
+      "analysis": {
+        "scores": {
+          "affective": 0.9938,
+          "cognitive": 0.0053,
+          "agency": 0.0009
+        },
+        "dominant": "affective"
+      },
+      "timestamp": "2026-04-06T18:17:04.868697"
+    },
+    {
+      "message": "does hair grow back if you beat cancer",
+      "analysis": {
+        "scores": {
+          "affective": 0.0897,
+          "cognitive": 0.9078,
+          "agency": 0.0026
+        },
+        "dominant": "cognitive"
+      },
+      "timestamp": "2026-04-06T18:23:46.587313"
     }
   ]
 }
