@@ -142,6 +142,60 @@
         "small_wins": [],
         "insights": []
       }
+    },
+    {
+      "role": "user",
+      "content": "hello",
+      "timestamp": "2026-04-10T00:18:24.239788"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I help you today?",
+      "timestamp": "2026-04-10T00:18:24.239788",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.7029,
+          "cognitive": 0.1076,
+          "agency": 0.1895
+        },
+        "dominant": "affective"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-10",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "my goal is to be able to make a chocolate cake",
+      "timestamp": "2026-04-10T00:18:45.694102"
+    },
+    {
+      "role": "assistant",
+      "content": "That sounds like a good goal! What's the first step you want to take towards it?",
+      "timestamp": "2026-04-10T00:18:45.694102",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.0027,
+          "cognitive": 0.0013,
+          "agency": 0.9959
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-10",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
     }
   ],
   "cognitive_shifts": [
@@ -204,6 +258,30 @@
         "dominant": "cognitive"
       },
       "timestamp": "2026-04-06T18:23:46.587313"
+    },
+    {
+      "message": "hello",
+      "analysis": {
+        "scores": {
+          "affective": 0.7029,
+          "cognitive": 0.1076,
+          "agency": 0.1895
+        },
+        "dominant": "affective"
+      },
+      "timestamp": "2026-04-10T00:18:24.239788"
+    },
+    {
+      "message": "my goal is to be able to make a chocolate cake",
+      "analysis": {
+        "scores": {
+          "affective": 0.0027,
+          "cognitive": 0.0013,
+          "agency": 0.9959
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-10T00:18:45.694102"
     }
   ]
 }
