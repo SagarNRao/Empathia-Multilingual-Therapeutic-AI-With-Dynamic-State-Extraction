@@ -91,6 +91,126 @@
           }
         ]
       }
+    },
+    {
+      "role": "user",
+      "content": "hello",
+      "timestamp": "2026-04-10T02:55:14.226828"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I help?",
+      "timestamp": "2026-04-10T02:55:14.226828",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.7029,
+          "cognitive": 0.1076,
+          "agency": 0.1895
+        },
+        "dominant": "affective"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-10",
+        "session_type": "brain_dump",
+        "notes": [
+          {
+            "title": "extracted_summary",
+            "content": "hello",
+            "category": "auto_summary"
+          }
+        ]
+      }
+    },
+    {
+      "role": "user",
+      "content": "hi",
+      "timestamp": "2026-04-10T02:55:20.333991"
+    },
+    {
+      "role": "assistant",
+      "content": "how are you doing today?",
+      "timestamp": "2026-04-10T02:55:20.333991",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.4602,
+          "cognitive": 0.2604,
+          "agency": 0.2794
+        },
+        "dominant": "affective"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-10",
+        "session_type": "brain_dump",
+        "notes": [
+          {
+            "title": "extracted_summary",
+            "content": "hi",
+            "category": "auto_summary"
+          }
+        ]
+      }
+    },
+    {
+      "role": "user",
+      "content": "hello",
+      "timestamp": "2026-04-10T02:58:15.656831"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I assist you today?",
+      "timestamp": "2026-04-10T02:58:15.656831",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.7029,
+          "cognitive": 0.1076,
+          "agency": 0.1895
+        },
+        "dominant": "affective"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-10",
+        "session_type": "brain_dump",
+        "notes": [
+          {
+            "title": "Summary at 02:58:15 AM",
+            "content": "hello",
+            "category": "auto_summary"
+          }
+        ]
+      }
+    },
+    {
+      "role": "user",
+      "content": "hi",
+      "timestamp": "2026-04-10T02:58:22.477883"
+    },
+    {
+      "role": "assistant",
+      "content": "Hi! How are you doing today?",
+      "timestamp": "2026-04-10T02:58:22.477883",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.4602,
+          "cognitive": 0.2604,
+          "agency": 0.2794
+        },
+        "dominant": "affective"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-10",
+        "session_type": "brain_dump",
+        "notes": [
+          {
+            "title": "Summary at 02:58:22 AM",
+            "content": "hi",
+            "category": "auto_summary"
+          }
+        ]
+      }
     }
   ],
   "cognitive_shifts": [
@@ -129,6 +249,54 @@
         "dominant": "agency"
       },
       "timestamp": "2026-04-10T02:50:41.042045"
+    },
+    {
+      "message": "hello",
+      "analysis": {
+        "scores": {
+          "affective": 0.7029,
+          "cognitive": 0.1076,
+          "agency": 0.1895
+        },
+        "dominant": "affective"
+      },
+      "timestamp": "2026-04-10T02:55:14.226828"
+    },
+    {
+      "message": "hi",
+      "analysis": {
+        "scores": {
+          "affective": 0.4602,
+          "cognitive": 0.2604,
+          "agency": 0.2794
+        },
+        "dominant": "affective"
+      },
+      "timestamp": "2026-04-10T02:55:20.333991"
+    },
+    {
+      "message": "hello",
+      "analysis": {
+        "scores": {
+          "affective": 0.7029,
+          "cognitive": 0.1076,
+          "agency": 0.1895
+        },
+        "dominant": "affective"
+      },
+      "timestamp": "2026-04-10T02:58:15.656831"
+    },
+    {
+      "message": "hi",
+      "analysis": {
+        "scores": {
+          "affective": 0.4602,
+          "cognitive": 0.2604,
+          "agency": 0.2794
+        },
+        "dominant": "affective"
+      },
+      "timestamp": "2026-04-10T02:58:22.477883"
     }
   ]
 }
