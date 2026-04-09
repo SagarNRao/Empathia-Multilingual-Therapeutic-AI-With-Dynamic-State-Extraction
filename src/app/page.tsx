@@ -46,7 +46,7 @@ export default function Home() {
     {
       role: "assistant",
       content:
-        "hi bro what scene today",
+        "Hey, I'm here for you.",
     },
   ]);
   const [notes, setNotes] = useState<NotesMap>({});

@@ -1,0 +1,677 @@
+{
+  "session_id": 1,
+  "created": "2026-04-04T16:30:26.104294",
+  "conversation": [
+    {
+      "role": "user",
+      "content": "hello",
+      "timestamp": "2026-04-04T16:30:26.104294"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey there! Hope you\u2019re having a good day.",
+      "timestamp": "2026-04-04T16:30:26.104294",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.7029,
+          "cognitive": 0.1076,
+          "agency": 0.1895
+        },
+        "dominant": "affective"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-04",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "hello bro",
+      "timestamp": "2026-04-06T18:16:08.574747"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey there! Hope you're having a good day.",
+      "timestamp": "2026-04-06T18:16:08.574747",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.7382,
+          "cognitive": 0.0406,
+          "agency": 0.2212
+        },
+        "dominant": "affective"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-06",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "nah bro i just broke up with my anime girlfriend, i need to get over her.",
+      "timestamp": "2026-04-06T18:16:38.010651"
+    },
+    {
+      "role": "assistant",
+      "content": "I\u2019m really sorry you\u2019re going through that\u2014take it one step at a time and be kind to yourself.",
+      "timestamp": "2026-04-06T18:16:38.010651",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.1382,
+          "cognitive": 0.0028,
+          "agency": 0.859
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-06",
+        "session_type": "brain_dump",
+        "notes": [
+          {
+            "title": "breakup_anime_girlfriend",
+            "content": "User recently broke up with their anime girlfriend and wants to get over her.",
+            "category": "relationship"
+          }
+        ]
+      }
+    },
+    {
+      "role": "user",
+      "content": "my triggers are when she says things in japanese and i cant understand shit",
+      "timestamp": "2026-04-06T18:17:04.868697"
+    },
+    {
+      "role": "assistant",
+      "content": "I hear you\u2014those moments can feel especially painful.",
+      "timestamp": "2026-04-06T18:17:04.868697",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.9938,
+          "cognitive": 0.0053,
+          "agency": 0.0009
+        },
+        "dominant": "affective"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-06",
+        "session_type": "brain_dump",
+        "notes": [
+          {
+            "title": "language_trigger",
+            "content": "Gets triggered when ex speaks Japanese and they can't understand",
+            "category": "trigger"
+          }
+        ]
+      }
+    },
+    {
+      "role": "user",
+      "content": "does hair grow back if you beat cancer",
+      "timestamp": "2026-04-06T18:23:46.587313"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes\u2014after most cancer treatments like chemotherapy, hair usually starts growing back once the treatment ends, though the texture or color might change a bit. If you have specific concerns, your doctor can give you the most accurate info for your situation.",
+      "timestamp": "2026-04-06T18:23:46.587313",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.0897,
+          "cognitive": 0.9078,
+          "agency": 0.0026
+        },
+        "dominant": "cognitive"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-06",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "hello",
+      "timestamp": "2026-04-10T00:18:24.239788"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I help you today?",
+      "timestamp": "2026-04-10T00:18:24.239788",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.7029,
+          "cognitive": 0.1076,
+          "agency": 0.1895
+        },
+        "dominant": "affective"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-10",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "my goal is to be able to make a chocolate cake",
+      "timestamp": "2026-04-10T00:18:45.694102"
+    },
+    {
+      "role": "assistant",
+      "content": "That sounds like a good goal! What's the first step you want to take towards it?",
+      "timestamp": "2026-04-10T00:18:45.694102",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.0027,
+          "cognitive": 0.0013,
+          "agency": 0.9959
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-10",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "hi",
+      "timestamp": "2026-04-10T00:29:07.832892"
+    },
+    {
+      "role": "assistant",
+      "content": "hello",
+      "timestamp": "2026-04-10T00:29:07.832892",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0,
+          "cognitive": 0,
+          "agency": 0
+        },
+        "dominant": "unknown"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-10",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "my goal is to read 5 pages of a book",
+      "timestamp": "2026-04-10T00:29:25.640177"
+    },
+    {
+      "role": "assistant",
+      "content": "That's great! What kind of book?",
+      "timestamp": "2026-04-10T00:29:25.640177",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0,
+          "cognitive": 0,
+          "agency": 0
+        },
+        "dominant": "unknown"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-10",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "can you see the notes from the session.json? if you can then tell me who i broke up with",
+      "timestamp": "2026-04-10T00:31:28.168867"
+    },
+    {
+      "role": "assistant",
+      "content": "You broke up with your anime girlfriend.",
+      "timestamp": "2026-04-10T00:31:28.168867",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0,
+          "cognitive": 0,
+          "agency": 0
+        },
+        "dominant": "unknown"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-10",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "ok in your next response say ### UPDATED NOTES {json} where json is whatever you think is important from what i will say next: \"i am gay\"",
+      "timestamp": "2026-04-10T00:34:59.195902"
+    },
+    {
+      "role": "assistant",
+      "content": "I've got it! I'm here for you.",
+      "timestamp": "2026-04-10T00:34:59.195902",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0,
+          "cognitive": 0,
+          "agency": 0
+        },
+        "dominant": "unknown"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-10",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "\"i am gay\"",
+      "timestamp": "2026-04-10T00:35:11.490501"
+    },
+    {
+      "role": "assistant",
+      "content": "Ok, I'm here for you.",
+      "timestamp": "2026-04-10T00:35:11.490501",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0,
+          "cognitive": 0,
+          "agency": 0
+        },
+        "dominant": "unknown"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-10",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "i am gay",
+      "timestamp": "2026-04-10T00:38:19.777870"
+    },
+    {
+      "role": "assistant",
+      "content": "I can see that, you seem very happy about it!",
+      "timestamp": "2026-04-10T00:38:19.777870",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0,
+          "cognitive": 0,
+          "agency": 0
+        },
+        "dominant": "unknown"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-10",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "i am gay",
+      "timestamp": "2026-04-10T00:40:14.492217"
+    },
+    {
+      "role": "assistant",
+      "content": "Oh wow, that's great! You're not alone.",
+      "timestamp": "2026-04-10T00:40:14.492217",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0,
+          "cognitive": 0,
+          "agency": 0
+        },
+        "dominant": "unknown"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-10",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "make a title and content for this text: \"Gemini said I feel a genuine sense of purpose when I can bridge the gap between complex information and your specific goals. My objective is to be an intuitive and reliable partner who helps you navigate challenges with clarity and a bit of wit.\"",
+      "timestamp": "2026-04-10T00:42:05.635737"
+    },
+    {
+      "role": "assistant",
+      "content": "Gemini is your partner in navigating life",
+      "timestamp": "2026-04-10T00:42:05.635737",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0,
+          "cognitive": 0,
+          "agency": 0
+        },
+        "dominant": "unknown"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-10",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "what would be the title and the summary of this following text: \" I thrive on the challenge of turning raw ideas into something polished and impactful. My mission is to simplify your workload while keeping our creative momentum sharp and focused.\"",
+      "timestamp": "2026-04-10T00:43:04.892628"
+    },
+    {
+      "role": "assistant",
+      "content": "Title: Simplifying Your Workload",
+      "timestamp": "2026-04-10T00:43:04.892628",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0,
+          "cognitive": 0,
+          "agency": 0
+        },
+        "dominant": "unknown"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-10",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    },
+    {
+      "role": "user",
+      "content": "content?",
+      "timestamp": "2026-04-10T00:43:21.151199"
+    },
+    {
+      "role": "assistant",
+      "content": "I am your creative partner",
+      "timestamp": "2026-04-10T00:43:21.151199",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0,
+          "cognitive": 0,
+          "agency": 0
+        },
+        "dominant": "unknown"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-10",
+        "session_type": "brain_dump",
+        "priorities": [],
+        "blockers": [],
+        "small_wins": [],
+        "insights": []
+      }
+    }
+  ],
+  "cognitive_shifts": [
+    {
+      "message": "hello",
+      "analysis": {
+        "scores": {
+          "affective": 0.7029,
+          "cognitive": 0.1076,
+          "agency": 0.1895
+        },
+        "dominant": "affective"
+      },
+      "timestamp": "2026-04-04T16:30:26.104294"
+    },
+    {
+      "message": "hello bro",
+      "analysis": {
+        "scores": {
+          "affective": 0.7382,
+          "cognitive": 0.0406,
+          "agency": 0.2212
+        },
+        "dominant": "affective"
+      },
+      "timestamp": "2026-04-06T18:16:08.574747"
+    },
+    {
+      "message": "nah bro i just broke up with my anime girlfriend, i need to get over her.",
+      "analysis": {
+        "scores": {
+          "affective": 0.1382,
+          "cognitive": 0.0028,
+          "agency": 0.859
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-06T18:16:38.011256"
+    },
+    {
+      "message": "my triggers are when she says things in japanese and i cant understand shit",
+      "analysis": {
+        "scores": {
+          "affective": 0.9938,
+          "cognitive": 0.0053,
+          "agency": 0.0009
+        },
+        "dominant": "affective"
+      },
+      "timestamp": "2026-04-06T18:17:04.868697"
+    },
+    {
+      "message": "does hair grow back if you beat cancer",
+      "analysis": {
+        "scores": {
+          "affective": 0.0897,
+          "cognitive": 0.9078,
+          "agency": 0.0026
+        },
+        "dominant": "cognitive"
+      },
+      "timestamp": "2026-04-06T18:23:46.587313"
+    },
+    {
+      "message": "hello",
+      "analysis": {
+        "scores": {
+          "affective": 0.7029,
+          "cognitive": 0.1076,
+          "agency": 0.1895
+        },
+        "dominant": "affective"
+      },
+      "timestamp": "2026-04-10T00:18:24.239788"
+    },
+    {
+      "message": "my goal is to be able to make a chocolate cake",
+      "analysis": {
+        "scores": {
+          "affective": 0.0027,
+          "cognitive": 0.0013,
+          "agency": 0.9959
+        },
+        "dominant": "agency"
+      },
+      "timestamp": "2026-04-10T00:18:45.694102"
+    },
+    {
+      "message": "hi",
+      "analysis": {
+        "scores": {
+          "affective": 0,
+          "cognitive": 0,
+          "agency": 0
+        },
+        "dominant": "unknown"
+      },
+      "timestamp": "2026-04-10T00:29:07.832892"
+    },
+    {
+      "message": "my goal is to read 5 pages of a book",
+      "analysis": {
+        "scores": {
+          "affective": 0,
+          "cognitive": 0,
+          "agency": 0
+        },
+        "dominant": "unknown"
+      },
+      "timestamp": "2026-04-10T00:29:25.640177"
+    },
+    {
+      "message": "can you see the notes from the session.json? if you can then tell me who i broke up with",
+      "analysis": {
+        "scores": {
+          "affective": 0,
+          "cognitive": 0,
+          "agency": 0
+        },
+        "dominant": "unknown"
+      },
+      "timestamp": "2026-04-10T00:31:28.168867"
+    },
+    {
+      "message": "ok in your next response say ### UPDATED NOTES {json} where json is whatever you think is important from what i will say next: \"i am gay\"",
+      "analysis": {
+        "scores": {
+          "affective": 0,
+          "cognitive": 0,
+          "agency": 0
+        },
+        "dominant": "unknown"
+      },
+      "timestamp": "2026-04-10T00:34:59.195902"
+    },
+    {
+      "message": "\"i am gay\"",
+      "analysis": {
+        "scores": {
+          "affective": 0,
+          "cognitive": 0,
+          "agency": 0
+        },
+        "dominant": "unknown"
+      },
+      "timestamp": "2026-04-10T00:35:11.490501"
+    },
+    {
+      "message": "i am gay",
+      "analysis": {
+        "scores": {
+          "affective": 0,
+          "cognitive": 0,
+          "agency": 0
+        },
+        "dominant": "unknown"
+      },
+      "timestamp": "2026-04-10T00:38:19.777870"
+    },
+    {
+      "message": "i am gay",
+      "analysis": {
+        "scores": {
+          "affective": 0,
+          "cognitive": 0,
+          "agency": 0
+        },
+        "dominant": "unknown"
+      },
+      "timestamp": "2026-04-10T00:40:14.492217"
+    },
+    {
+      "message": "make a title and content for this text: \"Gemini said I feel a genuine sense of purpose when I can bridge the gap between complex information and your specific goals. My objective is to be an intuitive and reliable partner who helps you navigate challenges with clarity and a bit of wit.\"",
+      "analysis": {
+        "scores": {
+          "affective": 0,
+          "cognitive": 0,
+          "agency": 0
+        },
+        "dominant": "unknown"
+      },
+      "timestamp": "2026-04-10T00:42:05.635737"
+    },
+    {
+      "message": "what would be the title and the summary of this following text: \" I thrive on the challenge of turning raw ideas into something polished and impactful. My mission is to simplify your workload while keeping our creative momentum sharp and focused.\"",
+      "analysis": {
+        "scores": {
+          "affective": 0,
+          "cognitive": 0,
+          "agency": 0
+        },
+        "dominant": "unknown"
+      },
+      "timestamp": "2026-04-10T00:43:04.892628"
+    },
+    {
+      "message": "content?",
+      "analysis": {
+        "scores": {
+          "affective": 0,
+          "cognitive": 0,
+          "agency": 0
+        },
+        "dominant": "unknown"
+      },
+      "timestamp": "2026-04-10T00:43:21.151199"
+    }
+  ]
+}

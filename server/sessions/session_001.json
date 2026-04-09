@@ -1,157 +1,16 @@
 {
   "session_id": 1,
-  "created": "2026-04-04T16:30:26.104294",
+  "created": "2026-04-10T02:50:01.096250",
   "conversation": [
     {
       "role": "user",
       "content": "hello",
-      "timestamp": "2026-04-04T16:30:26.104294"
-    },
-    {
-      "role": "assistant",
-      "content": "Hey there! Hope you\u2019re having a good day.",
-      "timestamp": "2026-04-04T16:30:26.104294",
-      "cognitive_shift": {
-        "scores": {
-          "affective": 0.7029,
-          "cognitive": 0.1076,
-          "agency": 0.1895
-        },
-        "dominant": "affective"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-04",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
-      "content": "hello bro",
-      "timestamp": "2026-04-06T18:16:08.574747"
-    },
-    {
-      "role": "assistant",
-      "content": "Hey there! Hope you're having a good day.",
-      "timestamp": "2026-04-06T18:16:08.574747",
-      "cognitive_shift": {
-        "scores": {
-          "affective": 0.7382,
-          "cognitive": 0.0406,
-          "agency": 0.2212
-        },
-        "dominant": "affective"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-06",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
-      "content": "nah bro i just broke up with my anime girlfriend, i need to get over her.",
-      "timestamp": "2026-04-06T18:16:38.010651"
-    },
-    {
-      "role": "assistant",
-      "content": "I\u2019m really sorry you\u2019re going through that\u2014take it one step at a time and be kind to yourself.",
-      "timestamp": "2026-04-06T18:16:38.010651",
-      "cognitive_shift": {
-        "scores": {
-          "affective": 0.1382,
-          "cognitive": 0.0028,
-          "agency": 0.859
-        },
-        "dominant": "agency"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-06",
-        "session_type": "brain_dump",
-        "notes": [
-          {
-            "title": "breakup_anime_girlfriend",
-            "content": "User recently broke up with their anime girlfriend and wants to get over her.",
-            "category": "relationship"
-          }
-        ]
-      }
-    },
-    {
-      "role": "user",
-      "content": "my triggers are when she says things in japanese and i cant understand shit",
-      "timestamp": "2026-04-06T18:17:04.868697"
-    },
-    {
-      "role": "assistant",
-      "content": "I hear you\u2014those moments can feel especially painful.",
-      "timestamp": "2026-04-06T18:17:04.868697",
-      "cognitive_shift": {
-        "scores": {
-          "affective": 0.9938,
-          "cognitive": 0.0053,
-          "agency": 0.0009
-        },
-        "dominant": "affective"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-06",
-        "session_type": "brain_dump",
-        "notes": [
-          {
-            "title": "language_trigger",
-            "content": "Gets triggered when ex speaks Japanese and they can't understand",
-            "category": "trigger"
-          }
-        ]
-      }
-    },
-    {
-      "role": "user",
-      "content": "does hair grow back if you beat cancer",
-      "timestamp": "2026-04-06T18:23:46.587313"
-    },
-    {
-      "role": "assistant",
-      "content": "Yes\u2014after most cancer treatments like chemotherapy, hair usually starts growing back once the treatment ends, though the texture or color might change a bit. If you have specific concerns, your doctor can give you the most accurate info for your situation.",
-      "timestamp": "2026-04-06T18:23:46.587313",
-      "cognitive_shift": {
-        "scores": {
-          "affective": 0.0897,
-          "cognitive": 0.9078,
-          "agency": 0.0026
-        },
-        "dominant": "cognitive"
-      },
-      "notes": {
-        "session_id": 1,
-        "date": "2026-04-06",
-        "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
-      }
-    },
-    {
-      "role": "user",
-      "content": "hello",
-      "timestamp": "2026-04-10T00:18:24.239788"
+      "timestamp": "2026-04-10T02:50:01.096250"
     },
     {
       "role": "assistant",
       "content": "Hello! How can I help you today?",
-      "timestamp": "2026-04-10T00:18:24.239788",
+      "timestamp": "2026-04-10T02:50:01.096250",
       "cognitive_shift": {
         "scores": {
           "affective": 0.7029,
@@ -164,26 +23,29 @@
         "session_id": 1,
         "date": "2026-04-10",
         "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
+        "notes": [
+          {
+            "title": "extracted_summary",
+            "content": "hello",
+            "category": "auto_summary"
+          }
+        ]
       }
     },
     {
       "role": "user",
-      "content": "my goal is to be able to make a chocolate cake",
-      "timestamp": "2026-04-10T00:18:45.694102"
+      "content": "my goal is to learn karate",
+      "timestamp": "2026-04-10T02:50:18.333110"
     },
     {
       "role": "assistant",
-      "content": "That sounds like a good goal! What's the first step you want to take towards it?",
-      "timestamp": "2026-04-10T00:18:45.694102",
+      "content": "Wow, that sounds awesome! What do you want to do to work towards it?",
+      "timestamp": "2026-04-10T02:50:18.333110",
       "cognitive_shift": {
         "scores": {
-          "affective": 0.0027,
-          "cognitive": 0.0013,
-          "agency": 0.9959
+          "affective": 0.0032,
+          "cognitive": 0.0026,
+          "agency": 0.9943
         },
         "dominant": "agency"
       },
@@ -191,10 +53,43 @@
         "session_id": 1,
         "date": "2026-04-10",
         "session_type": "brain_dump",
-        "priorities": [],
-        "blockers": [],
-        "small_wins": [],
-        "insights": []
+        "notes": [
+          {
+            "title": "extracted_summary",
+            "content": "my goal is to learn karate",
+            "category": "auto_summary"
+          }
+        ]
+      }
+    },
+    {
+      "role": "user",
+      "content": "forget that i want to learn how to cook now",
+      "timestamp": "2026-04-10T02:50:41.042045"
+    },
+    {
+      "role": "assistant",
+      "content": "Well, you're on your way to becoming a better person. Keep up the good work!",
+      "timestamp": "2026-04-10T02:50:41.042045",
+      "cognitive_shift": {
+        "scores": {
+          "affective": 0.002,
+          "cognitive": 0.0006,
+          "agency": 0.9974
+        },
+        "dominant": "agency"
+      },
+      "notes": {
+        "session_id": 1,
+        "date": "2026-04-10",
+        "session_type": "brain_dump",
+        "notes": [
+          {
+            "title": "extracted_summary",
+            "content": "forget that i want to learn how to cook now",
+            "category": "auto_summary"
+          }
+        ]
       }
     }
   ],
@@ -209,79 +104,31 @@
         },
         "dominant": "affective"
       },
-      "timestamp": "2026-04-04T16:30:26.104294"
+      "timestamp": "2026-04-10T02:50:01.096250"
     },
     {
-      "message": "hello bro",
+      "message": "my goal is to learn karate",
       "analysis": {
         "scores": {
-          "affective": 0.7382,
-          "cognitive": 0.0406,
-          "agency": 0.2212
-        },
-        "dominant": "affective"
-      },
-      "timestamp": "2026-04-06T18:16:08.574747"
-    },
-    {
-      "message": "nah bro i just broke up with my anime girlfriend, i need to get over her.",
-      "analysis": {
-        "scores": {
-          "affective": 0.1382,
-          "cognitive": 0.0028,
-          "agency": 0.859
+          "affective": 0.0032,
+          "cognitive": 0.0026,
+          "agency": 0.9943
         },
         "dominant": "agency"
       },
-      "timestamp": "2026-04-06T18:16:38.011256"
+      "timestamp": "2026-04-10T02:50:18.333110"
     },
     {
-      "message": "my triggers are when she says things in japanese and i cant understand shit",
+      "message": "forget that i want to learn how to cook now",
       "analysis": {
         "scores": {
-          "affective": 0.9938,
-          "cognitive": 0.0053,
-          "agency": 0.0009
-        },
-        "dominant": "affective"
-      },
-      "timestamp": "2026-04-06T18:17:04.868697"
-    },
-    {
-      "message": "does hair grow back if you beat cancer",
-      "analysis": {
-        "scores": {
-          "affective": 0.0897,
-          "cognitive": 0.9078,
-          "agency": 0.0026
-        },
-        "dominant": "cognitive"
-      },
-      "timestamp": "2026-04-06T18:23:46.587313"
-    },
-    {
-      "message": "hello",
-      "analysis": {
-        "scores": {
-          "affective": 0.7029,
-          "cognitive": 0.1076,
-          "agency": 0.1895
-        },
-        "dominant": "affective"
-      },
-      "timestamp": "2026-04-10T00:18:24.239788"
-    },
-    {
-      "message": "my goal is to be able to make a chocolate cake",
-      "analysis": {
-        "scores": {
-          "affective": 0.0027,
-          "cognitive": 0.0013,
-          "agency": 0.9959
+          "affective": 0.002,
+          "cognitive": 0.0006,
+          "agency": 0.9974
         },
         "dominant": "agency"
       },
-      "timestamp": "2026-04-10T00:18:45.694102"
+      "timestamp": "2026-04-10T02:50:41.042045"
     }
   ]
 }
