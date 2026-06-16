@@ -38,7 +38,7 @@ export type CognitiveShift = {
 const SESSION_ID = 1;
 
 // Server Configuration
-const CHAT_SERVER = "http://localhost:8000"; // Main server (LLM + session management)
+const CHAT_SERVER = "http://localhost:8001"; // Main server (LLM + session management)
 // Note: The main server internally calls the NLP server at http://localhost:8001
 
 export default function Home() {
@@ -157,7 +157,7 @@ export default function Home() {
         <div className="px-6 py-4 border-b border-white/[0.06] flex items-center gap-3">
           <div className={`w-2 h-2 rounded-full ${serverError ? 'bg-red-500' : 'bg-[#c8a96e]'} ${!serverError && 'animate-pulse'}`} />
           <span className="text-sm font-medium tracking-widest uppercase text-[#c8a96e]">
-            Indy
+            Empathia
           </span>
           {serverError && (
             <span className="text-xs text-red-400 ml-auto mr-2">
