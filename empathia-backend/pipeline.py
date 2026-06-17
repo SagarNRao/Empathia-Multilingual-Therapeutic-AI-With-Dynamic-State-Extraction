@@ -1,6 +1,6 @@
 """
 Empathia Backend Pipeline
-- Gemini as therapist LLM
+- Groq (llama-3.3-70b) as therapist LLM
 - RoBERTa zero-shot classifier for cognitive shift (affective / cognitive / agency)
 - JSON session store (one file per session)
 - RAG via cosine similarity on stored embeddings
@@ -9,8 +9,6 @@ Empathia Backend Pipeline
 
 import json
 import os
-import time
-import math
 from pathlib import Path
 from datetime import datetime
 from typing import List, Optional
@@ -20,14 +18,14 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-# ── Gemini ──────────────────────────────────────────────────────────────────
-import google.generativeai as genai
+# -- Groq ---------------------------------------------------------------------
+from groq import Groq
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "YOUR_GEMINI_API_KEY_HERE")
-genai.configure(api_key=GEMINI_API_KEY)
-gemini_model = genai.GenerativeModel("gemini-1.5-flash")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY", "YOUR_GROQ_API_KEY_HERE")
+groq_client = Groq(api_key=GROQ_API_KEY)
+GROQ_MODEL = "llama-3.3-70b-versatile"
 
-# ── RoBERTa zero-shot classifier ─────────────────────────────────────────────
+# -- RoBERTa zero-shot classifier ---------------------------------------------
 from transformers import pipeline as hf_pipeline
 
 LABEL_DESCRIPTIONS = {
@@ -36,22 +34,22 @@ LABEL_DESCRIPTIONS = {
     "agency":    "taking action, making decisions, expressing control, planning, choosing",
 }
 
-print("Loading zero-shot classifier (RoBERTa)…")
+print("Loading zero-shot classifier (RoBERTa)...")
 classifier = hf_pipeline(
     "zero-shot-classification",
-    model="cross-encoder/nli-roberta-base",   # RoBERTa NLI model
+    model="cross-encoder/nli-roberta-base",
     device=-1,  # CPU; change to 0 for GPU
 )
 print("Classifier ready.")
 
-# ── Sentence embeddings for RAG ───────────────────────────────────────────────
+# -- Sentence embeddings for RAG ----------------------------------------------
 from sentence_transformers import SentenceTransformer
 
-print("Loading sentence encoder…")
+print("Loading sentence encoder...")
 encoder = SentenceTransformer("all-MiniLM-L6-v2")
 print("Encoder ready.")
 
-# ── Session store ─────────────────────────────────────────────────────────────
+# -- Session store ------------------------------------------------------------
 SESSIONS_DIR = Path("sessions")
 SESSIONS_DIR.mkdir(exist_ok=True)
 
@@ -71,7 +69,7 @@ def save_session(session_id: int, data: dict):
     session_path(session_id).write_text(json.dumps(data, indent=2))
 
 
-# ── RAG helpers ───────────────────────────────────────────────────────────────
+# -- RAG helpers --------------------------------------------------------------
 
 def cosine_similarity(a: list, b: list) -> float:
     a, b = np.array(a), np.array(b)
@@ -80,7 +78,6 @@ def cosine_similarity(a: list, b: list) -> float:
 
 
 def retrieve_context(query: str, turns: list, top_k: int = 3) -> str:
-    """Return the top-k most similar past exchanges as a context block."""
     if not turns:
         return ""
     q_emb = encoder.encode(query).tolist()
@@ -94,31 +91,27 @@ def retrieve_context(query: str, turns: list, top_k: int = 3) -> str:
     snippets = []
     for score, t in scored[:top_k]:
         snippets.append(
-            f"[past – {t['cognitive_label']} | sim={score:.2f}]\n"
+            f"[past - {t['cognitive_label']} | sim={score:.2f}]\n"
             f"User: {t['prompt']}\nTherapist: {t['response']}"
         )
     return "\n\n".join(snippets)
 
 
-# ── Cognitive shift classifier ─────────────────────────────────────────────────
+# -- Cognitive shift classifier -----------------------------------------------
 
 def classify_shift(text: str) -> dict:
-    """Return scores for affective / cognitive / agency."""
     candidate_labels = list(LABEL_DESCRIPTIONS.values())
     result = classifier(text, candidate_labels, multi_label=False)
-
-    # Map back from description → label key
     desc_to_key = {v: k for k, v in LABEL_DESCRIPTIONS.items()}
     scores = {}
     for label, score in zip(result["labels"], result["scores"]):
         key = desc_to_key.get(label, label)
         scores[key] = round(score, 4)
-
     dominant = max(scores, key=scores.get)
     return {"scores": scores, "dominant": dominant}
 
 
-# ── Therapist system prompt ────────────────────────────────────────────────────
+# -- Therapist system prompt --------------------------------------------------
 
 SYSTEM_PROMPT = """You are Empathia, a warm, compassionate AI therapist.
 
@@ -129,14 +122,13 @@ Guidelines:
 - When the user seems stuck in emotions (affective), gently invite reflection.
 - When the user is reflecting (cognitive), validate their insight and encourage agency.
 - When the user is ready to act (agency), affirm their autonomy and help them plan concretely.
-- Keep responses concise: 2–4 sentences unless the user shares a lot.
+- Keep responses concise: 2-4 sentences unless the user shares a lot.
 - Never give unsolicited advice. Wait to be asked.
 - If the user expresses suicidal thoughts or crisis, respond with empathy and direct them to professional help immediately.
 - Maintain a calm, non-judgmental tone at all times.
 """
 
-
-# ── FastAPI app ────────────────────────────────────────────────────────────────
+# -- FastAPI app --------------------------------------------------------------
 
 app = FastAPI(title="Empathia Pipeline")
 
@@ -171,41 +163,44 @@ async def chat(req: ChatRequest):
     # 2. RAG context
     rag_context = retrieve_context(req.message, turns)
 
-    # 3. Build Gemini prompt
-    context_block = ""
+    # 3. Build messages for Groq
+    messages = [{"role": "system", "content": SYSTEM_PROMPT}]
+
+    # Inject RAG context as a hidden system note
     if rag_context:
-        context_block = (
-            "\n\n--- Relevant past exchanges (for context only, do not mention these) ---\n"
-            + rag_context
-            + "\n--- End of context ---\n"
-        )
+        messages.append({
+            "role": "system",
+            "content": (
+                "Relevant past exchanges for context (do not reference these directly):\n\n"
+                + rag_context
+            )
+        })
 
-    # Build conversation history for Gemini
-    history_text = ""
-    for m in (req.history or [])[-6:]:  # last 6 turns to keep context window sane
-        role = "User" if m["role"] == "user" else "Therapist"
-        history_text += f"{role}: {m['content']}\n"
+    # Add conversation history (last 6 turns)
+    for m in (req.history or [])[-6:]:
+        role = "user" if m["role"] == "user" else "assistant"
+        messages.append({"role": role, "content": m["content"]})
 
-    full_prompt = (
-        SYSTEM_PROMPT
-        + context_block
-        + "\n\nConversation so far:\n"
-        + history_text
-        + f"\nUser: {req.message}\nTherapist:"
-    )
+    # Add current message
+    messages.append({"role": "user", "content": req.message})
 
-    # 4. Call Gemini
+    # 4. Call Groq
     try:
-        gemini_response = gemini_model.generate_content(full_prompt)
-        reply = gemini_response.text.strip()
+        response = groq_client.chat.completions.create(
+            model=GROQ_MODEL,
+            messages=messages,
+            temperature=0.7,
+            max_tokens=512,
+        )
+        reply = response.choices[0].message.content.strip()
     except Exception as e:
-        print(f"GEMINI ERROR: {type(e).__name__}: {e}")  # add this line
-        raise HTTPException(status_code=502, detail=f"Gemini error: {e}")
+        print(f"GROQ ERROR: {type(e).__name__}: {e}")
+        raise HTTPException(status_code=502, detail=f"Groq error: {e}")
 
     # 5. Embed the user message for future RAG
     embedding = encoder.encode(req.message).tolist()
 
-    # 6. Persist turn to session JSON
+    # 6. Persist turn
     turn = {
         "turn_num": len(turns) + 1,
         "timestamp": datetime.utcnow().isoformat(),
@@ -222,7 +217,7 @@ async def chat(req: ChatRequest):
     return ChatResponse(
         reply=reply,
         cognitive_shift=shift,
-        extracted_notes=None,  # extend here if you want note extraction
+        extracted_notes=None,
     )
 
 
