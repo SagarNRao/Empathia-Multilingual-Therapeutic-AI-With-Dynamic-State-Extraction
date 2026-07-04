@@ -1,14 +1,6 @@
-"""
-Empathia Backend Pipeline
-- Groq (llama-3.3-70b) as therapist LLM
-- RoBERTa zero-shot classifier for cognitive shift (affective / cognitive / agency)
-- JSON session store (one file per session)
-- RAG via cosine similarity on stored embeddings
-- FastAPI server on port 8001
-"""
-
 import json
 import os
+import re
 from pathlib import Path
 from datetime import datetime
 from typing import List, Optional
@@ -21,7 +13,8 @@ from pydantic import BaseModel
 # -- Groq ---------------------------------------------------------------------
 from groq import Groq
 
-GROQ_API_KEY = os.getenv("GROQ_API_KEY", "YOUR_GROQ_API_KEY_HERE")
+# GROQ_API_KEY = os.getenv("GROQ_API_KEY", "YOUR_GROQ_API_KEY_HERE")
+GROQ_API_KEY = "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"
 groq_client = Groq(api_key=GROQ_API_KEY)
 GROQ_MODEL = "llama-3.3-70b-versatile"
 
@@ -61,8 +54,10 @@ def session_path(session_id: int) -> Path:
 def load_session(session_id: int) -> dict:
     p = session_path(session_id)
     if p.exists():
-        return json.loads(p.read_text())
-    return {"session_id": session_id, "turns": []}
+        data = json.loads(p.read_text())
+        data.setdefault("notes", {})
+        return data
+    return {"session_id": session_id, "turns": [], "notes": {}}
 
 
 def save_session(session_id: int, data: dict):
@@ -95,6 +90,125 @@ def retrieve_context(query: str, turns: list, top_k: int = 3) -> str:
             f"User: {t['prompt']}\nTherapist: {t['response']}"
         )
     return "\n\n".join(snippets)
+
+
+# -- Long-term notes ----------------------------------------------------------
+# Notes are a small, evolving memory of durable facts about the user
+# (goals, traumas, beliefs, wins, etc). They live inside the session's
+# "notes" dict, keyed by a slug of the note title, and get folded into the
+# RAG context on every turn so the LLM can use them without the user having
+# to repeat themselves. They're only written to when the extraction model
+# judges a message actually contains something worth remembering.
+
+NOTE_CATEGORIES = [
+    "goal", "dream", "trauma", "trigger", "belief",
+    "relationship", "win", "blocker", "insight", "personal_info",
+]
+
+NOTE_EXTRACTION_PROMPT = """You are a quiet note-taker working alongside a therapy chatbot.
+
+Read the user's latest message and decide whether it contains a durable fact worth
+remembering long-term about the user: a goal, dream, trauma, trigger, belief,
+relationship detail, win, blocker, insight, or basic personal info.
+
+Do NOT extract a note for small talk, greetings, questions, vague statements,
+or anything already fully captured by an existing note with no new detail added.
+
+You are given the user's existing notes (key, title, category, content). If the
+new message adds to, updates, or restates one of those notes with more detail,
+return an "update" op referencing that note's exact key. If it's genuinely new
+information, return a "create" op. If there's nothing worth saving, return an
+empty list — this should be the common case, most messages need no note.
+
+Respond with ONLY valid JSON, no markdown fences, no commentary, in exactly this
+shape:
+{"notes": [{"action": "create", "title": "<short title>", "content": "<1-2 sentence note, written in third person>", "category": "<one of: goal, dream, trauma, trigger, belief, relationship, win, blocker, insight, personal_info>"}]}
+
+For an update, include the existing key:
+{"notes": [{"action": "update", "key": "<existing note key>", "title": "<short title>", "content": "<merged, updated 1-2 sentence note>", "category": "<category>"}]}
+
+If nothing to save: {"notes": []}
+"""
+
+
+def slugify(text: str) -> str:
+    s = re.sub(r"[^a-z0-9]+", "_", text.lower()).strip("_")
+    return s[:50] or "note"
+
+
+def extract_notes(message: str, existing_notes: dict) -> list:
+    """Ask the LLM whether this message contains a durable note-worthy fact.
+    Returns a list of note ops (possibly empty) — it does NOT write to the
+    session itself, see apply_note_ops for that."""
+    if not message or len(message.strip()) < 3:
+        return []
+
+    notes_summary = [
+        {"key": k, "title": n.get("title"), "category": n.get("category"), "content": n.get("content")}
+        for k, n in existing_notes.items()
+    ]
+
+    try:
+        response = groq_client.chat.completions.create(
+            model=GROQ_MODEL,
+            messages=[
+                {"role": "system", "content": NOTE_EXTRACTION_PROMPT},
+                {
+                    "role": "user",
+                    "content": json.dumps({"message": message, "existing_notes": notes_summary}),
+                },
+            ],
+            temperature=0,
+            max_tokens=400,
+        )
+        raw = response.choices[0].message.content.strip()
+        raw = raw.replace("```json", "").replace("```", "").strip()
+        parsed = json.loads(raw)
+        ops = parsed.get("notes", [])
+        return ops if isinstance(ops, list) else []
+    except Exception as e:
+        # Note-taking is a nice-to-have; never let it break the chat turn.
+        print(f"NOTE EXTRACTION ERROR: {type(e).__name__}: {e}")
+        return []
+
+
+def apply_note_ops(session: dict, ops: list) -> list:
+    """Applies create/update ops to session['notes'] in place.
+    Returns the list of notes touched this turn (each tagged with its key)."""
+    notes = session.setdefault("notes", {})
+    touched = []
+
+    for op in ops:
+        category = op.get("category")
+        title = (op.get("title") or "").strip()
+        content = (op.get("content") or "").strip()
+        if category not in NOTE_CATEGORIES or not title or not content:
+            continue
+
+        key = op.get("key")
+        if op.get("action") == "update" and key and key in notes:
+            notes[key].update(
+                title=title,
+                content=content,
+                category=category,
+                updated_at=datetime.utcnow().isoformat(),
+            )
+            touched.append({**notes[key], "key": key})
+        else:
+            new_key = base_key = slugify(title)
+            i = 2
+            while new_key in notes:
+                new_key = f"{base_key}_{i}"
+                i += 1
+            notes[new_key] = {
+                "title": title,
+                "content": content,
+                "category": category,
+                "updated_at": datetime.utcnow().isoformat(),
+            }
+            touched.append({**notes[new_key], "key": new_key})
+
+    return touched
 
 
 # -- Cognitive shift classifier -----------------------------------------------
@@ -160,8 +274,15 @@ async def chat(req: ChatRequest):
     # 1. Classify cognitive shift
     shift = classify_shift(req.message)
 
-    # 2. RAG context
+    # 2. RAG context (past turn similarity + long-term notes)
     rag_context = retrieve_context(req.message, turns)
+
+    notes_context = ""
+    if session.get("notes"):
+        notes_context = "\n".join(
+            f"- [{n['category']}] {n['title']}: {n['content']}"
+            for n in session["notes"].values()
+        )
 
     # 3. Build messages for Groq
     messages = [{"role": "system", "content": SYSTEM_PROMPT}]
@@ -173,6 +294,17 @@ async def chat(req: ChatRequest):
             "content": (
                 "Relevant past exchanges for context (do not reference these directly):\n\n"
                 + rag_context
+            )
+        })
+
+    # Inject long-term notes as a hidden system note
+    if notes_context:
+        messages.append({
+            "role": "system",
+            "content": (
+                "Known long-term notes about this user, built up over past sessions "
+                "(use to inform your response naturally, do not recite them verbatim):\n\n"
+                + notes_context
             )
         })
 
@@ -200,7 +332,11 @@ async def chat(req: ChatRequest):
     # 5. Embed the user message for future RAG
     embedding = encoder.encode(req.message).tolist()
 
-    # 6. Persist turn
+    # 6. Note-taking: only writes a note if the model judges it necessary
+    note_ops = extract_notes(req.message, session.get("notes", {}))
+    touched_notes = apply_note_ops(session, note_ops)
+
+    # 7. Persist turn + notes
     turn = {
         "turn_num": len(turns) + 1,
         "timestamp": datetime.utcnow().isoformat(),
@@ -217,7 +353,7 @@ async def chat(req: ChatRequest):
     return ChatResponse(
         reply=reply,
         cognitive_shift=shift,
-        extracted_notes=None,
+        extracted_notes={"notes": touched_notes} if touched_notes else None,
     )
 
 
@@ -237,6 +373,12 @@ async def get_cognitive_shifts(session_id: int):
             "content":   t.get("prompt", ""),
         })
     return {"shifts": shifts}
+
+
+@app.get("/sessions/{session_id}/notes")
+async def get_notes(session_id: int):
+    session = load_session(session_id)
+    return {"notes": session.get("notes", {})}
 
 
 @app.get("/health")

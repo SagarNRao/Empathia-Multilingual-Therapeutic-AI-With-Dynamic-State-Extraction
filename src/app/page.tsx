@@ -152,7 +152,7 @@ export default function Home() {
   return (
     <div className="flex h-screen bg-[#0f0f0f] text-[#e8e3d9] font-sans overflow-hidden">
       {/* Chat area */}
-      <div className="flex flex-col flex-1 min-w-0">
+      <div className="flex flex-col flex-1 min-w-0 min-h-0">
         {/* Header */}
         <div className="px-6 py-4 border-b border-white/[0.06] flex items-center gap-3">
           <div className={`w-2 h-2 rounded-full ${serverError ? 'bg-red-500' : 'bg-[#c8a96e]'} ${!serverError && 'animate-pulse'}`} />
@@ -177,7 +177,7 @@ export default function Home() {
         </div>
 
         {/* Messages */}
-        <ScrollArea className="flex-1 px-6 py-6">
+        <ScrollArea className="flex-1 min-h-0 px-6 py-6">
           <div className="max-w-2xl mx-auto space-y-6">
             {messages.map((msg, i) => (
               <div
