@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Empathia
 
-## Getting Started
+A conversational AI therapist that understands your psychological state and remembers what matters to you.
 
-First, run the development server:
+## Features
 
+**Cognitive State Tracking**  
+Every message is classified into three psychological dimensions — affective (emotional), cognitive (reflective), and agency (action-oriented). A real-time chart visualizes your conversation arc so you can see patterns in how you think and feel.
+
+**Long-Term Memory**  
+Share a goal, fear, or important belief once — Empathia remembers it. The system quietly extracts and stores durable facts about you (goals, traumas, triggers, wins, insights, etc.) and feeds them back into future conversations so you don't have to repeat yourself.
+
+**Context-Aware Responses**  
+Behind the scenes, a RAG system surfaces relevant past exchanges based on semantic similarity, while your stored notes inform the LLM's understanding of your situation — all without overwhelming the context window.
+
+**Warm, Non-Judgmental**  
+Built on Llama-3.3-70B with a system prompt that prioritizes listening, reflection, and genuine curiosity. No unsolicited advice. No diagnosis. Just presence.
+
+## Architecture
+
+**Backend** (`pipeline.py`)
+- **FastAPI** server with session management and CORS
+- **RoBERTa** (cross-encoder) for zero-shot cognitive state classification
+- **Sentence Transformers** (all-MiniLM-L6-v2) for semantic embeddings + RAG
+- **Groq API** (Llama-3.3-70B) for both main chat and note extraction
+- **Local JSON** session store (turns, cognitive shifts, long-term notes)
+
+**Frontend** (`page.tsx`)
+- **Next.js** (App Router) with **shadcn/ui** for component library
+- Real-time chat interface with streaming message loading states
+- **Recharts** visualization of cognitive shifts over time
+- **Sidebar** for viewing extracted notes (goals, beliefs, traumas, etc.)
+
+## Setup
+
+### Backend
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pip install fastapi uvicorn groq transformers sentence-transformers numpy pydantic
+export GROQ_API_KEY="your_key_here"
+python pipeline.py
+# Runs on http://localhost:8001
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+# Runs on http://localhost:3000
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The frontend talks to the backend at `http://localhost:8001`. Both must be running for the full experience.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How It Works
 
-## Learn More
+1. **You send a message** → Backend classifies its cognitive flavor (affective/cognitive/agency)
+2. **RAG + Notes context** → System retrieves similar past turns and feeds in your known goals/beliefs
+3. **LLM responds** → Groq generates a warm, contextual reply that feels like it understands you
+4. **Note extraction** → If your message contains a durable fact (a goal, a trigger, etc.), the system quietly saves it
+5. **Data persists** → Everything lives in a JSON session file, so memory survives restarts
 
-To learn more about Next.js, take a look at the following resources:
+## File Breakdown
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `pipeline.py` — FastAPI + Groq + classifier + RAG + note-taking
+- `page.tsx` — Main chat UI, modal for cognitive shift graph
+- `cognitive-shift-chart.tsx` — Recharts visualization + turn-by-turn breakdown
+- `notes-sidebar.tsx` — Displays extracted notes with category badges
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Note:** This is an educational project designed to explore how conversational AI can maintain long-term memory, track psychological state, and respond with empathy. It is not a replacement for professional mental health care. If you or someone you know is in crisis, please reach out to a mental health professional or crisis helpline.
