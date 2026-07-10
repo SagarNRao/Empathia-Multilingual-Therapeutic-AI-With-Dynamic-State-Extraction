@@ -1,14 +1,25 @@
 # Empathia
 
-A conversational AI therapist that understands your psychological state and remembers what matters to you.
+A conversational AI therapist that tracks the user's mental state and remembers what matters to you.
 
 ## Features
 
 **Cognitive State Tracking**  
-Every message is classified into three psychological dimensions — affective (emotional), cognitive (reflective), and agency (action-oriented). A real-time chart visualizes your conversation arc so you can see patterns in how you think and feel.
+Every message is classified into 3 psychological dimensions:
+
+**Affective:** Expressing Emotions, Feelings
+**Cognitive:** Reflection, Processing
+**Agency:** Willingness to take action, Control
+
+A real-time chart visualizes your conversation arc so you can see patterns in how you think and feel.
+
+https://github.com/user-attachments/assets/3207ae79-4c74-4339-9019-9cd628391692
 
 **Long-Term Memory**  
 Share a goal, fear, or important belief once — Empathia remembers it. The system quietly extracts and stores durable facts about you (goals, traumas, triggers, wins, insights, etc.) and feeds them back into future conversations so you don't have to repeat yourself.
+
+<img width="1108" height="707" alt="image" src="https://github.com/user-attachments/assets/68f141f3-dd54-4b8f-be4c-1bf865ab557d" />
+
 
 **Context-Aware Responses**  
 Behind the scenes, a RAG system surfaces relevant past exchanges based on semantic similarity, while your stored notes inform the LLM's understanding of your situation — all without overwhelming the context window.
